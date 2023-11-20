@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Home() {
   const [data, setData] = useState(null);
@@ -26,7 +26,11 @@ function Home() {
         <h1>
           Frontend <span>React</span> Developer
         </h1>
-        <p>{data && data.bio}</p>
+        <p>
+          👋 Hi there, I'm Divyanshu Naudiyal! 🚀 Frontend Developer from
+          Uttarakhand, India 🇮🇳 💼 Skills: React, JavaScript, Bootstrap, CSS,
+          HTML, SASS
+        </p>
         <p>
           <img
             src="https://skillicons.dev/icons?i=js,html,css,react,sass,bootstrap,tailwind"
