@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 function Contact() {
   return (
     <div className="contact">
