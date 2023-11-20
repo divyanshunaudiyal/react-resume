@@ -1,0 +1,37 @@
+@use "./global.scss" as *;
+
+nav {
+  background: $bg-blue;
+  font-size: 1.2rem;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  // font-weight: 800;
+  .logo {
+    h2 {
+      color: $highlight;
+    }
+  }
+  .links {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1.5rem;
+
+    a {
+      color: black;
+      transition: transform ease;
+
+      &:hover {
+        color: $highlight;
+        transform: scale(1.5);
+      }
+    }
+  }
+}

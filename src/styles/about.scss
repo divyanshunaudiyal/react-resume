@@ -1,0 +1,52 @@
+@use "./global.scss" as *;
+.about {
+  padding: 1rem;
+  padding: 10rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 972px) {
+    flex-direction: column;
+  }
+
+  &__img {
+    @media (max-width: 460px) {
+      height: auto;
+      width: 80%;
+    }
+
+    width: 35rem;
+    height: 25rem;
+    position: relative;
+    img {
+      border-radius: 1rem;
+      height: inherit;
+      width: inherit;
+    }
+
+    span {
+      position: absolute;
+      height: 10rem;
+      background: white;
+      bottom: -37px;
+      right: -46px;
+      border-radius: 10rem;
+
+      animation: rotate 5s linear infinite;
+    }
+  }
+  &__text {
+    text-align: center;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

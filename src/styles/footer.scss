@@ -1,0 +1,30 @@
+@use "./global.scss" as *;
+footer {
+  padding: 1rem 1rem;
+  font-weight: bold;
+  background: $bg-blue;
+  box-shadow: $text-shadow;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .social-profiles {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: transform ease;
+
+    a {
+      color: black;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

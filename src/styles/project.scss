@@ -1,0 +1,60 @@
+@use "./global.scss" as *;
+.project {
+  //   padding: 10rem 1rem 7rem 1rem;
+  font-size: 62.5%;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  grid-gap: 5rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  height: auto;
+  //   width: 100%;
+  text-align: center;
+  justify-content: center;
+
+  .project-container {
+    span {
+      color: #23621c;
+    }
+    padding: 10rem;
+    position: relative;
+    &__project1 {
+      @include about;
+      .project-img {
+        border-radius: 1rem;
+        box-shadow: $text-shadow;
+        width: 45rem;
+        height: 20rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+          transform: translateY(0);
+        }
+
+        img:hover {
+          transform: translateY(-83%);
+          transition: transform 5s ease-in-out;
+          scroll-margin-top: 83%; /* Adjust this value based on your layout */
+        }
+      }
+      .project-info {
+        width: 20rem;
+      }
+    }
+    &__project2 {
+      @include about;
+
+      video {
+        border-radius: 1rem;
+        box-shadow: $text-shadow;
+        width: 45rem;
+        height: 20rem;
+        overflow: hidden;
+      }
+    }
+  }
+}

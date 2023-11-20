@@ -1,0 +1,43 @@
+@use "./global.scss" as *;
+.contact {
+  img {
+    width: 1.75rem;
+  }
+
+  text-align: center;
+  width: 100vw;
+
+  &__heading {
+    color: rgb(15, 96, 96);
+  }
+
+  &__info {
+    .phone,
+    .mail {
+      padding: 1rem;
+    }
+    .phone {
+      border: 0.5px dashed;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      font-size: large;
+      font-weight: bold;
+      a {
+        color: $highlight;
+        transition: transform ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
