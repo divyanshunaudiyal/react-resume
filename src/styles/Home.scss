@@ -12,11 +12,12 @@
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-  @media (max-width: 972px) {
+  @media (max-width: 768px) {
     margin: 5rem 0 0 0;
     grid-template-columns: auto;
     justify-content: center;
     align-items: center;
+    text-align: left;
   }
 
   &__text {
@@ -24,11 +25,21 @@
     display: grid;
     grid-template-rows: auto auto auto;
 
+    @media (max-width: 768px) {
+      box-sizing: border-box;
+      width: 50%;
+    }
+
     span {
       color: $highlight;
     }
 
     p {
+      img {
+        @media screen and (max-width: 768px) {
+          width: 20rem;
+        }
+      }
     }
   }
 
@@ -48,6 +59,10 @@
     position: relative;
     transition: all 1s ease-in-out;
     width: 25rem;
+    @media screen and (max-width: 768px) {
+      width: 20rem;
+      height: 20rem;
+    }
   }
 }
 

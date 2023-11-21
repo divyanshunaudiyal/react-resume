@@ -13,7 +13,14 @@ nav {
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-  // font-weight: 800;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+    justify-content: center;
+
+    text-align: left;
+  }
+
   .logo {
     h2 {
       color: $highlight;
