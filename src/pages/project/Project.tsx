@@ -32,7 +32,7 @@ function Project() {
           </div>
           <div className="project-img">
             <video width="640" height="360" controls autoPlay>
-              <source src="images/recipe.mp4" type="video/mp4" />
+              <source src="/recipe.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

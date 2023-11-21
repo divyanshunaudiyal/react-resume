@@ -5,7 +5,7 @@ function About() {
         <div className="about__img">
           <img src="src/images/about.jpg" alt="" />
           <span>
-            <img src="/images/frontend.svg" alt="" />
+            <img src="/frontend.svg" alt="" />
           </span>
         </div>
         <div className="about__text">
