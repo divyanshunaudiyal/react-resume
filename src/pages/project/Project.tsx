@@ -10,7 +10,7 @@ function Project() {
         </h1>
         <div className="project-container__project1">
           <div className="project-img">
-            <img src="src/images/carrent-image.jpeg" alt="rent-a-car image" />
+            <img src="images/carrent-image.jpg" alt="rent-a-car image" />
           </div>
           <div className="project-info">
             <h1>Rent-a-car App</h1>
@@ -32,7 +32,7 @@ function Project() {
           </div>
           <div className="project-img">
             <video width="640" height="360" controls autoPlay>
-              <source src="src/images/recipe.mp4" type="video/mp4" />
+              <source src="images/recipe.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
