@@ -10,7 +10,7 @@ function Project() {
         </h1>
         <div className="project-container__project1">
           <div className="project-img">
-            <img src="images/carrent-image.jpg" alt="rent-a-car image" />
+            <img src="/carrent-image.jpg" alt="rent-a-car image" />
           </div>
           <div className="project-info">
             <h1>Rent-a-car App</h1>

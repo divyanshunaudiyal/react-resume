@@ -3,9 +3,9 @@ function About() {
     <section>
       <div className="about">
         <div className="about__img">
-          <img src="src/images/about.jpg" alt="" />
+          <img src="about.jpg" alt="" />
           <span>
-            <img src="/frontend.svg" alt="" />
+            <img src="frontend.svg" alt="bb" />
           </span>
         </div>
         <div className="about__text">
