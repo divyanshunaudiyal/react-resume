@@ -41,3 +41,22 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .contact {
+    margin: auto 0;
+    display: flex;
+    height: 48rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // height: 100vw;
+    // margin-top: 10rem;
+    // margin-bottom: 20rem;
+    &__info,
+    .phone,
+    .mail {
+      padding: 0.5rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 @use "./global.scss" as *;
 .home {
   background: $bg-white;
+  width: 100vw;
   // margin: 5rem 0;
   padding: 6rem 3rem 4rem 1rem;
   text-align: center;
@@ -9,38 +10,38 @@
   display: grid;
   gap: 3rem;
   grid-template-columns: auto auto;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-  @media (max-width: 768px) {
-    margin: 5rem 0 0 0;
-    grid-template-columns: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
+  // @media (max-width: 768px) {
+  //   margin: 5rem 0 0 0;
+  //   grid-template-columns: auto;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-align: left;
+  // }
 
   &__text {
     width: 60rem;
     display: grid;
     grid-template-rows: auto auto auto;
 
-    @media (max-width: 768px) {
-      box-sizing: border-box;
-      width: 50%;
-    }
+    // @media (max-width: 768px) {
+    //   box-sizing: border-box;
+    //   width: 50%;
+    // }
 
     span {
       color: $highlight;
     }
 
-    p {
-      img {
-        @media screen and (max-width: 768px) {
-          width: 20rem;
-        }
-      }
-    }
+    // p {
+    //   img {
+    //     @media screen and (max-width: 768px) {
+    //       width: 20rem;
+    //     }
+    //   }
+    // }
   }
 
   &__pic {
@@ -59,10 +60,10 @@
     position: relative;
     transition: all 1s ease-in-out;
     width: 25rem;
-    @media screen and (max-width: 768px) {
-      width: 20rem;
-      height: 20rem;
-    }
+    // @media screen and (max-width: 768px) {
+    //   width: 20rem;
+    //   height: 20rem;
+    // }
   }
 }
 
@@ -75,5 +76,26 @@
   }
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 0;
+    margin: 3rem 0 1rem 0;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__text {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &__pic {
+      margin: 0 auto;
+      width: 90%;
+    }
   }
 }

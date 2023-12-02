@@ -14,12 +14,12 @@ nav {
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: auto;
-    justify-content: center;
+  // @media screen and (max-width: 768px) {
+  //   grid-template-columns: auto;
+  //   justify-content: center;
 
-    text-align: left;
-  }
+  //   text-align: left;
+  // }
 
   .logo {
     h2 {
@@ -38,6 +38,30 @@ nav {
       &:hover {
         color: $highlight;
         transform: scale(1.5);
+        // text-decoration: ;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100vw;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+
+    .logo {
+      h2 {
+        margin: 0;
+        padding: 2px 0;
+      }
+    }
+    .links {
+      gap: 0.75rem;
+
+      a:hover {
+        transform: scale(1.2);
       }
     }
   }

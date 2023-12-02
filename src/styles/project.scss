@@ -27,7 +27,7 @@
       .project-img {
         border-radius: 1rem;
         box-shadow: $text-shadow;
-        width: 45rem;
+        width: 50%;
         height: 20rem;
         overflow: hidden;
         img {
@@ -42,7 +42,7 @@
         }
       }
       .project-info {
-        width: 20rem;
+        width: 50%;
       }
     }
     &__project2 {
@@ -54,6 +54,26 @@
         width: 45rem;
         height: 20rem;
         overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    width: 100vw;
+
+    &-container {
+      padding: 0;
+
+      &__project1 {
+        .project-img {
+          border-radius: 0;
+          width: 100%;
+        }
+        .project-info {
+          width: 100%;
+        }
       }
     }
   }

@@ -12,9 +12,9 @@ footer {
     justify-content: space-around;
     align-items: center;
 
-    @media screen and (max-width: 678px) {
-      flex-direction: column;
-    }
+    // @media screen and (max-width: 678px) {
+    //   flex-direction: column;
+    // }
   }
 
   .social-profiles {
@@ -29,6 +29,17 @@ footer {
       &:hover {
         transform: scale(1.5);
       }
+    }
+  }
+}
+//phone screen
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0;
+    position: initial;
+    .footer-container {
+      flex-direction: column;
     }
   }
 }
