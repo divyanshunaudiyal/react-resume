@@ -25,9 +25,9 @@ function Project() {
           <div className="project-info">
             <h1>Recipe App</h1>
             <p>
-              A car rental website is an online platform that allows users to
-              rent cars for personal or business use. The website provides an
-              interface for searching, comparing, and reserving cars.
+              Our recipe app is your go-to platform for effortless recipe
+              exploration. Easily search and discover a diverse array of dishes
+              tailored to your taste. Happy cooking!
             </p>
           </div>
           <div className="project-img">

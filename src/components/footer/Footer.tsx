@@ -9,7 +9,10 @@ function Footer() {
           <p>Copyright &copy; 2023 DN</p>
         </div>
         <div className="social-profiles">
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/divyanshunaudiyal/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -29,7 +32,7 @@ function Footer() {
               <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
             </svg>
           </a>
-          <a href="">
+          <a href="https://github.com/divyanshunaudiyal" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
