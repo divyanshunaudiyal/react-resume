@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  grid-gap: 5rem;
+
   display: grid;
   gap: 5rem;
   grid-template-columns: 1fr;
@@ -24,6 +24,7 @@
     position: relative;
     &__project1 {
       @include about;
+      height: 20rem;
       .project-img {
         border-radius: 1rem;
         box-shadow: $text-shadow;
@@ -62,17 +63,50 @@
 @media screen and (max-width: 768px) {
   .project {
     width: 100vw;
+    font-size: 50%;
 
-    &-container {
-      padding: 0;
+    .project-container {
+      padding: 10rem 0 0 0;
+      h1 {
+        font-size: 1.5rem;
+      }
 
       &__project1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 2rem;
+        flex-direction: column;
         .project-img {
-          border-radius: 0;
-          width: 100%;
+          // border-radius: 0;
+          width: 90%;
+          height: initial;
         }
         .project-info {
-          width: 100%;
+          width: 45%;
+
+          h1 {
+            color: rgb(0, 106, 118);
+          }
+        }
+      }
+
+      &__project2 {
+        margin: 3rem 0 0 0;
+        padding: 0;
+        // padding-top: 2rem;
+
+        flex-direction: column;
+
+        .project-info {
+          width: 45%;
+
+          h1 {
+            color: rgb(0, 106, 118);
+          }
+        }
+
+        video {
+          width: 90%;
         }
       }
     }
