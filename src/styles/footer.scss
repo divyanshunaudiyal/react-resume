@@ -2,7 +2,8 @@
 footer {
   padding: 1rem 1rem;
   font-weight: bold;
-  background: $bg-blue;
+  background: transparent;
+
   box-shadow: $text-shadow;
   position: fixed;
   bottom: 0;
@@ -24,7 +25,7 @@ footer {
     transition: transform ease;
 
     a {
-      color: black;
+      color: wheat;
 
       &:hover {
         transform: scale(1.5);

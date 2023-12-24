@@ -1,10 +1,10 @@
-import Navbar from "./components/navbar/Navbar.tsx";
+import Navbar from "./components/navbar/Navbar.jsx";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/footer/Footer.tsx";
-function Layout() {
+function Layout({ textEnter, textLeave }) {
   return (
     <>
-      <Navbar />
+      <Navbar onMouseEnter={textEnter} onMouseLeave={textLeave} />
       <Outlet />
       <Footer />
     </>

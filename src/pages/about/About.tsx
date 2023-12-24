@@ -1,9 +1,36 @@
+import { useEffect, useState } from "react";
+
 function About() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the bounding box of the component
+      const boundingBox = document
+        .getElementById("about")
+        .getBoundingClientRect();
+
+      // Check if the component is in the viewport
+      if (boundingBox.top < window.innerHeight && boundingBox.bottom >= 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add event listener for the scroll event
+    window.addEventListener("load", handleScroll);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("load", handleScroll);
+    };
+  }, []);
+  const componentClass = isScrolled && "leftToRight";
   return (
     <section>
-      <div className="about">
+      <div className={`about ${componentClass}`} id="about">
         <div className="about__img">
-          <img src="about.jpg" alt="" />
+          <img src="bg-laptop.jpg" alt="" />
           <span>
             <img src="frontend.svg" alt="bb" />
           </span>

@@ -36,6 +36,7 @@
       border-radius: 10rem;
 
       animation: rotate 5s linear infinite;
+      display: none;
     }
   }
   &__text {
@@ -64,5 +65,69 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+.leftToRight {
+  opacity: 1;
+  animation: leftToRight 1.5s forwards ease-in-out;
+}
+/* right to left */
+.rightToLeft {
+  opacity: 1;
+  animation: rightToLeft 1s forwards ease-in-out;
+}
+/* for card to animate from bottom to top */
+.fadeToTop {
+  animation: fadeInFromBottom 1.5s forwards ease-in;
+}
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+/* All keyframes */
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Keyframes for the right card */
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  /* 50% {
+    transform: translateY(25%);
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

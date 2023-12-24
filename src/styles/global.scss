@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../../public/Caveat/static/Caveat-Regular.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../public/Caveat/static/Caveat-Bold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("../../public/Archivo_Narrow/static/ArchivoNarrow-Regular.ttf");
+  font-weight: 600;
+}
 $text-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 $bg-blue: #f6ffff;
+$bg-black: #042a2a;
 $bg-white: #ffffff;
 $highlight: rgb(19, 141, 141);
 @mixin about {
@@ -11,4 +27,73 @@ $highlight: rgb(19, 141, 141);
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
+}
+
+/* animation classes */
+.leftToRight {
+  opacity: 1;
+  display: block;
+  animation: leftToRight 1.5s forwards ease-in-out;
+}
+/* right to left */
+.rightToLeft {
+  opacity: 1;
+  animation: rightToLeft 1s forwards ease-in-out;
+}
+/* for card to animate from bottom to top */
+.fadeToTop {
+  animation: fadeInFromBottom 1.5s forwards ease-in;
+}
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+/* All keyframes */
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Keyframes for the right card */
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  /* 50% {
+    transform: translateY(25%);
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: "Archivo";
 }
