@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 function Navbar() {
   const [mousePosition, setMousePosition] = useState({
@@ -9,7 +9,7 @@ function Navbar() {
   });
   const [cursorVariant, setCursorVariant] = useState("default");
   useEffect(() => {
-    const mouseMove = (e) => {
+    const mouseMove = (e: MouseEvent) => {
       // console.log(e.clientX);
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -17,14 +17,24 @@ function Navbar() {
     window.addEventListener("mousemove", mouseMove);
 
     return () => {
-      window.removeEventListener("mouseMove", mouseMove);
+      window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
 
-  const variants = {
+  const variants: {
+    default: { x: number; y: number };
+    text: {
+      height: number;
+      width: number;
+      x: number;
+      y: number;
+      background: string;
+      mixBlendMode: string;
+    };
+  } = {
     default: {
-      x: mousePosition.x - 10,
-      y: mousePosition.y - 10, //-16 to center the dot because we set the width and height to 32px so half of it
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
     },
     text: {
       height: 50,
@@ -35,6 +45,7 @@ function Navbar() {
       mixBlendMode: "difference",
     },
   };
+
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
 
@@ -42,7 +53,7 @@ function Navbar() {
     <motion.nav className="navbar-container">
       <motion.div
         className="cursor"
-        variants={variants}
+        variants={variants as Variants}
         animate={cursorVariant}
       ></motion.div>
       <div className="logo">

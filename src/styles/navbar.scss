@@ -17,8 +17,8 @@ nav {
 
   .cursor {
     background-color: rgb(219, 137, 30);
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     position: fixed;
     top: 0;
@@ -91,9 +91,9 @@ nav {
           background: wheat;
           transition: 3s;
         }
-        &:hover {
-          // color: $highlight;
-        }
+        // &:hover {
+        //   // color: $highlight;
+        // }
       }
     }
   }

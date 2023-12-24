@@ -6,7 +6,7 @@ function About() {
     const handleScroll = () => {
       // Get the bounding box of the component
       const boundingBox = document
-        .getElementById("about")
+        .getElementById("about")!
         .getBoundingClientRect();
 
       // Check if the component is in the viewport

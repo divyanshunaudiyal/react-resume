@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home.tsx";
-import Layout from "./Layout.tsx";
+import Layout from "./Layout.jsx";
 import Contact from "./pages/contact/Contact.tsx";
 import About from "./pages/about/About.tsx";
 import Project from "./pages/project/Project.tsx";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+// import { useEffect, useState } from "react";
+// import { motion } from "framer-motion";
 function App() {
   // const [mousePosition, setMousePosition] = useState({
   //   x: 0,
