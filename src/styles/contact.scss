@@ -1,43 +1,109 @@
 @use "./global.scss" as *;
+@use "./keyframes.scss";
 .contact {
-  img {
-    width: 1.75rem;
-  }
-
-  text-align: center;
   width: 100vw;
 
-  &__heading {
-    color: rgb(15, 96, 96);
-  }
+  // position: relative;
+  overflow: hidden;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // .heading-absolute {
+  // }
+  // .circle-absolute {
+  //   position: absolute;
+  //   top: -10%;
+  //   width: 100vw;
+  //   height: 1000px;
+  //   left: -55%;
+  //   background: rgb(49, 105, 107);
+  //   border-radius: 50%;
+  // }
 
-  &__info {
-    .phone,
+  .contact-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s;
+    // position: relative;
+
+    // .circle {
+    //   position: absolute;
+    //   width: 100vw;
+    //   top: 50%;
+    //   border-radius: 50%;
+    //   height: 100vh;
+    //   background: white;
+    // }
+
+    .contact-h1 {
+      margin: 1rem auto;
+      letter-spacing: 5px;
+      color: white;
+      font-size: 40px;
+      font-family: monospace;
+      animation: adjustSpacing 3s, slideToRight 1s;
+      width: 20rem;
+    }
     .mail {
-      padding: 1rem;
-    }
-    .phone {
-      border: 0.5px dashed;
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
-    }
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-
-      font-size: large;
-      font-weight: bold;
+      animation: slideToLeft 2s;
+      color: rgb(212, 212, 212);
       a {
-        color: $highlight;
-        transition: transform ease;
-
-        &:hover {
-          transform: scale(1.1);
-        }
+        color: rgb(247, 176, 35);
       }
+    }
+    /* for contact form */
+    .contact-form form {
+      max-width: 700px;
+      margin: 0 auto;
+      animation: slideToTop 2s;
+    }
+    .contact-form form label {
+      display: block;
+      width: 100%;
+      /* padding: 0 0 0 3%; */
+      margin-bottom: 3%;
+    }
+    label input {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 1.8em;
+      width: 100%;
+      /*  */
+      background: transparent;
+      color: #999;
+      font-size: 14px;
+      padding: 16px;
+      border: none;
+      border-bottom: 1px solid;
+      border-bottom-color: rgba(12, 12, 12, 0.3);
+      border-radius: 1rem;
+    }
+    label input:focus {
+      outline: none;
+      color: rgb(53, 39, 3);
+      border-bottom: 1px solid goldenrod;
+      transition: 1s;
+      background: rgb(255, 255, 255);
+    }
+    //adding animation toeach input separately
+
+    #whatsapp-btn {
+      box-sizing: border-box;
+      border-radius: 15px;
+      padding: 1rem 1.5rem;
+      border: 1px solid rgb(15, 255, 107);
+      background: transparent;
+      color: rgb(17, 111, 54);
+      font-family: monospace;
+      font-weight: 300;
+    }
+    #whatsapp-btn:hover {
+      background: rgb(35, 211, 102);
+      transition: 1s;
+      color: white;
     }
   }
 }
@@ -60,3 +126,5 @@
     }
   }
 }
+
+// animated classes

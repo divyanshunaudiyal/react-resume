@@ -1,0 +1,139 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 30%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideToTop {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bigToSmall {
+  from {
+    transform: scale(3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip-path: inset(76% 0px 21%);
+  }
+
+  5% {
+    clip-path: inset(54% 0px 7%);
+  }
+
+  10% {
+    clip-path: inset(55% 0px 29%);
+  }
+
+  15% {
+    clip-path: inset(89% 0px 3%);
+  }
+
+  20% {
+    clip-path: inset(33% 0px 40%);
+  }
+
+  25% {
+    clip-path: inset(17% 0px 56%);
+  }
+
+  30% {
+    clip-path: inset(37% 0px 51%);
+  }
+
+  35% {
+    clip-path: inset(53% 0px 26%);
+  }
+
+  55% {
+    clip-path: inset(67% 0px 11%);
+  }
+
+  70% {
+    clip-path: inset(87% 0px 4%);
+  }
+
+  75% {
+    clip-path: inset(10% 0px 8%);
+  }
+
+  95% {
+    clip-path: inset(23% 0px 55%);
+  }
+
+  100% {
+    clip-path: inset(1% 0px 81%);
+  }
+}
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(10% 0px 21%);
+  }
+
+  25% {
+    clip-path: inset(17% 0px 56%);
+  }
+
+  50% {
+    clip-path: inset(53% 0px 26%);
+  }
+
+  75% {
+    clip-path: inset(10% 0px 8%);
+  }
+
+  100% {
+    clip-path: inset(1% 0px 81%);
+  }
+}
+@keyframes adjustSpacing {
+  from {
+    letter-spacing: 30px;
+  }
+  to {
+    letter-spacing: 5px;
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

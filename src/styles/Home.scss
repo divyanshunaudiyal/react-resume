@@ -1,4 +1,5 @@
 @use "./global.scss" as *;
+@use "./keyframes.scss";
 .home {
   padding-top: 5rem;
 
@@ -9,42 +10,7 @@
   z-index: 1;
   grid-template-columns: auto auto;
   gap: 4rem;
-  // &::before {
-  //   content: "";
-  //   height: 100vh;
-  //   width: 100vw;
-  //   color: rgba(113, 113, 113, 0.07);
-  //   position: fixed;
-  //   z-index: -1;
-  //   background: linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px
-  //       90px,
-  //     linear-gradient(to right, currentcolor 1px, transparent 1px) transparent;
-  //   transition: all 0.5s linear 0s;
-  // }
-
-  // &::after {
-  //   background-image: radial-gradient(
-  //       at 40% 40%,
-  //       rgb(112, 201, 245) 50px,
-  //       rgb(46, 125, 149) 50%
-  //     ),
-  //     radial-gradient(at 90% 10%, rgb(255, 230, 243) 0px, transparent 50%),
-  //     radial-gradient(at 50% 95%, rgb(43, 255, 255) 0px, transparent 50%),
-  //     radial-gradient(at 20% 30%, rgb(138, 245, 138) 0px, transparent 50%),
-  //     radial-gradient(at 90% 90%, rgb(255, 255, 0) 0px, transparent 50%),
-  //     radial-gradient(at 33% 50%, rgb(246, 142, 98) 0px, transparent 50%),
-  //     radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
-
-  //   position: fixed;
-  //   content: "";
-  //   z-index: -1;
-  //   width: 100%;
-  //   height: 100%;
-  //   filter: blur(100px) saturate(100%);
-  //   top: 0px;
-  //   opacity: 0.1;
-  //   transform: translateZ(0px);
-  // }
+  animation: fadeIn 2s;
   &__text {
     // margin-left: 5%;
     width: 30rem;
@@ -55,7 +21,7 @@
     h1 {
       margin: 0;
       padding: 0;
-      // text-align: center;
+      animation: bigToSmall 2s;
 
       span {
         color: #0e72a5;
@@ -66,6 +32,9 @@
         letter-spacing: 1px;
       }
     }
+    p {
+      animation: slideToTop 2s;
+    }
   }
   &__pic {
     // width: 50%;
@@ -73,7 +42,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    animation: morph 2s ease-in-out infinite;
+    animation: morph 2s ease-in-out infinite, slideToLeft 2s;
     background: url("../../public/bg-2.jpg");
     background-position: 50%;
     background-repeat: no-repeat;
@@ -84,20 +53,6 @@
     position: relative;
     transition: all 1s ease-in-out;
     width: 20rem;
-    @media screen and (max-width: 768px) {
-    }
-  }
-}
-
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 30%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
 
@@ -114,25 +69,23 @@
     &__text {
       margin: 0 auto;
       width: 100%;
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        width: 95%;
+        margin: 0 auto;
+        img {
+          width: 90%;
+          margin: 10px 0 0;
+        }
+      }
     }
 
     &__pic {
-      margin: 2rem auto 0 auto;
-      width: 20rem;
-      height: 20rem;
+      margin: 3rem auto 0 auto;
+      width: 15rem;
+      height: 15rem;
     }
-  }
-}
-
-.fadeIn {
-  animation: fadeIn 2s ease-in;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

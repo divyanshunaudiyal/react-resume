@@ -1,15 +1,32 @@
+import useCursor from "../useCursor/useCursor";
+import { motion, Variants } from "framer-motion";
 function Footer() {
+  const { mousePosition, cursorVariant, textEnter, textLeave } = useCursor();
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePosition.x - 25,
+      y: mousePosition.y - 25,
+      background: "cadetblue",
+      mixBlendMode: "difference",
+    },
+  };
   return (
-    <footer>
+    <motion.footer>
       <div className="footer-container">
-        {/* <div className="name">
-          <p>Designed and Developed by Divyanshu Naudiyal</p>
-        </div> */}
         <div className="copyright">
           <p>Copyright &copy; 2023 DN</p>
         </div>
         <div className="social-profiles">
           <a
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
             href="https://www.linkedin.com/in/divyanshunaudiyal/"
             target="_blank"
           >
@@ -50,7 +67,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

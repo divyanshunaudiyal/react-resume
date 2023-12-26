@@ -45,11 +45,6 @@ function App() {
 
   return (
     <>
-      {/* <motion.div
-        className="cursor"
-        variants={variants}
-        animate={cursorVariant}
-      ></motion.div> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
