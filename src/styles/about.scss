@@ -1,133 +1,162 @@
 @use "./global.scss" as *;
-.about {
-  padding: 1rem;
-  padding: 10rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
+.about-container {
+  width: 100vw;
+  .about {
+    margin: 8rem auto;
+    display: grid;
+    grid-template-columns: auto;
 
-  // @media (max-width: 972px) {
-  //   padding: 10rem 0;
-  //   flex-direction: column;
-  // }
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s;
 
-  &__img {
-    @media (max-width: 460px) {
-      height: auto;
-      width: 80%;
+    &-text {
+      width: min-content; //not including will expand para below about and
+      .about-heading {
+        letter-spacing: 5px;
+        color: rgb(239 176 176);
+        font-size: 40px;
+        font-family: "Sigmar";
+        animation: adjustSpacing 1.25s, slideToRight 1.5s;
+        text-align: left;
+      }
+      .about-para {
+        margin: 1rem 0;
+        width: 85%;
+        color: rgb(182, 205, 204);
+        font-family: "Caveat";
+        font-size: 20px;
+        font-weight: 800;
+        text-align: right;
+        animation: slideToTop 2s;
+        // display: none;
+      }
+
+      & .academics {
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20%;
+        font-family: monospace;
+
+        & .education {
+          animation: slideToLeft 2s;
+        }
+        .skills {
+          animation: slideToRight 2s;
+        }
+
+        & > div {
+          //targets education and skills div
+          // border: 0.5px solid gray;
+          padding: 1rem;
+          border-radius: 2rem;
+          width: 25rem;
+          // box-shadow: 0px 0.2px 5px wheat;
+          h1 {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            color: whitesmoke;
+            font-size: 20px;
+            font-family: "Caveat";
+          }
+          p {
+            margin-left: 4px;
+          }
+          span {
+            display: block;
+            color: white;
+            margin-bottom: 2px;
+            // animation: slideToLeft 2s;
+          }
+        }
+      }
+
+      .resume {
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        animation: adjustSpacingSmall 5s;
+        letter-spacing: 1px;
+        a {
+          color: goldenrod;
+        }
+      }
     }
-
-    width: 35rem;
-    height: 25rem;
-    position: relative;
-    img {
-      border-radius: 1rem;
-      height: inherit;
-      width: inherit;
+    .extra {
+      opacity: 0;
     }
-
-    span {
-      position: absolute;
-      height: 10rem;
-      background: white;
-      bottom: -37px;
-      right: -46px;
-      border-radius: 10rem;
-
-      animation: rotate 5s linear infinite;
-      display: none;
+    .visible {
+      animation: fadeIn 3s forwards;
     }
-  }
-  &__text {
-    text-align: center;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    .other-than-work {
+      color: white;
+      padding: 0;
+      margin: 0;
+      margin: 6rem 1rem 1rem 0;
+      text-align: right;
+      font-family: "Caveat";
+      font-weight: 300;
+      // animation: bigToSmall 2s;
+    }
+    &-images {
+      overflow: hidden;
+      display: flex;
+      gap: 1rem;
+      // animation: slideToTop 2s;
+      img {
+        width: 10rem;
+        height: 9rem;
+        border-radius: 2rem;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .about {
-    padding: 0;
+    margin: 5rem auto !important;
+    // padding-top: 3rem;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 4rem;
-    flex-direction: column;
-    width: 80%;
 
-    &__img {
-      width: 100%;
-      height: 100%;
+    &-text {
+      width: initial !important;
     }
-  }
-}
 
-.leftToRight {
-  opacity: 1;
-  animation: leftToRight 1.5s forwards ease-in-out;
-}
-/* right to left */
-.rightToLeft {
-  opacity: 1;
-  animation: rightToLeft 1s forwards ease-in-out;
-}
-/* for card to animate from bottom to top */
-.fadeToTop {
-  animation: fadeInFromBottom 1.5s forwards ease-in;
-}
-.fadeIn {
-  animation: fadeIn 1s ease-in;
-}
-/* All keyframes */
-@keyframes leftToRight {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    &-para {
+      margin: 0 auto;
+      width: 90%;
+    }
+    .academics {
+      margin: 0;
+      // grid-template-columns: auto !important;
+      gap: 1.5rem !important;
+      justify-content: center;
 
-@keyframes rightToLeft {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+      & > div {
+        // border: 1px solid gray;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 80% !important;
+        // box-shadow: 0px 0.1px 3px wheat;
+      }
+    }
+    .resume {
+      animation: none !important;
+    }
+    &-images {
+      flex-direction: column;
+      img {
+        margin: 0 auto;
+      }
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-/* Keyframes for the right card */
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  /* 50% {
-    transform: translateY(25%);
-  } */
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    .other-than-work {
+      font-size: 16px;
+      text-align: left !important;
+      width: 100%;
+      margin: 1rem auto !important;
+    }
   }
 }

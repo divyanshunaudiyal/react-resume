@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 function Home() {
   // const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +43,7 @@ function Home() {
           anyways you can CONTACT ME
         </p>
 
-        <p>
+        <p className="language-icons">
           <img
             src="https://skillicons.dev/icons?i=js,html,css,react,sass,bootstrap,tailwind"
             alt="My Skills"

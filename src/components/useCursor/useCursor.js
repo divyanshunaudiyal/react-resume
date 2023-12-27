@@ -5,9 +5,7 @@ const useCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState("default");
 
-  const textEnter = () => {
-    setCursorVariant("text");
-  };
+  const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
 
   useEffect(() => {

@@ -6,37 +6,38 @@ import Contact from "./pages/contact/Contact.tsx";
 import About from "./pages/about/About.tsx";
 import Project from "./pages/project/Project.tsx";
 // import { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
+// import { Variants, motion } from "framer-motion";
 function App() {
   // const [mousePosition, setMousePosition] = useState({
   //   x: 0,
   //   y: 0,
-  // });
-  // const [cursorVariant, setCursorVariant] = useState("default");
+  // }); //set mouseposition to 0,0 position
+  // const [cursorVariant, setCursorVariant] = useState("default"); // cursor to default,when hovering will be changed to text
   // useEffect(() => {
-  //   const mouseMove = (e) => {
-  //     // console.log(e.clientX);
+  //   const mouseMove = (e: MouseEvent) => {
   //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //     // set mouseposition to current position
   //   };
 
   //   window.addEventListener("mousemove", mouseMove);
+  //   // on mouse move call mouseMove function to set positon of cursor
 
   //   return () => {
-  //     window.removeEventListener("mouseMove", mouseMove);
+  //     window.removeEventListener("mousemove", mouseMove);
   //   };
   // }, []);
 
   // const variants = {
   //   default: {
-  //     x: mousePosition.x - 16,
-  //     y: mousePosition.y - 16, //-16 to center the dot because we set the width and height to 32px so half of it
+  //     x: mousePosition.x - 9,
+  //     y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
   //   },
   //   text: {
-  //     height: 150,
-  //     width: 150,
-  //     x: mousePosition.x - 75,
-  //     y: mousePosition.y - 75,
-  //     background: "wheat",
+  //     height: 50,
+  //     width: 50,
+  //     x: mousePosition.x - 25,
+  //     y: mousePosition.y - 25, // size 50 , so -25
+  //     background: "cadetblue",
   //     mixBlendMode: "difference",
   //   },
   // };
@@ -45,6 +46,11 @@ function App() {
 
   return (
     <>
+      {/* <motion.div
+        className="cursor"
+        variants={variants as Variants}
+        animate={cursorVariant}
+      ></motion.div> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

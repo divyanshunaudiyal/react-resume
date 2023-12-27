@@ -21,10 +21,10 @@
     h1 {
       margin: 0;
       padding: 0;
-      animation: bigToSmall 2s;
+      animation: bigToSmall 1.5s;
 
       span {
-        color: #0e72a5;
+        color: $text-blue;
         position: relative;
         font-family: "Caveat";
         font-weight: 800;
@@ -35,10 +35,11 @@
     p {
       animation: slideToTop 2s;
     }
+    p.language-icons {
+      height: 3rem;
+    }
   }
   &__pic {
-    // width: 50%;
-    font-family: Poppins, sans-serif;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;

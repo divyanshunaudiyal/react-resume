@@ -137,3 +137,15 @@
     transform: translateX(0);
   }
 }
+
+@keyframes adjustSpacingSmall {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 10px;
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}

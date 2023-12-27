@@ -8,3 +8,13 @@
 * {
   cursor: none;
 }
+.cursor {
+  background-color: cadetblue;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}

@@ -13,11 +13,20 @@
   src: url("../../public/Archivo_Narrow/static/ArchivoNarrow-Regular.ttf");
   font-weight: 600;
 }
+@font-face {
+  font-family: "Sigmar";
+  src: url("../../public/Sigmar/Sigmar-Regular.ttf");
+}
+@font-face {
+  font-family: "Scribble";
+  src: url("../../public/Rubik_Scribble/RubikScribble-Regular.ttf");
+}
 $text-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 $bg-blue: #f6ffff;
 $bg-black: #042a2a;
 $bg-white: #ffffff;
 $highlight: rgb(19, 141, 141);
+$text-blue: #0e72a5;
 @mixin about {
   margin: 4rem 0 0 0;
   border-radius: 1rem;
@@ -29,10 +38,14 @@ $highlight: rgb(19, 141, 141);
   gap: 2rem;
 }
 
-/* animation classes */
+body {
+  font-family: "Archivo";
+}
+
+// animation classes
+
 .leftToRight {
   opacity: 1;
-  display: block;
   animation: leftToRight 1.5s forwards ease-in-out;
 }
 /* right to left */
@@ -46,54 +59,4 @@ $highlight: rgb(19, 141, 141);
 }
 .fadeIn {
   animation: fadeIn 1s ease-in;
-}
-/* All keyframes */
-@keyframes leftToRight {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes rightToLeft {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-/* Keyframes for the right card */
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  /* 50% {
-    transform: translateY(25%);
-  } */
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-body {
-  font-family: "Archivo";
 }
