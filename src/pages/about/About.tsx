@@ -36,11 +36,15 @@ function About() {
         <div className="about-text">
           <h1 className="about-heading">About.</h1>
           <p className="about-para">
-            Hi my name is Divyanshu Naudiyal. I am a frontend developer from
-            Dehradun , Uttarakhand , India. I provide custom designs at
-            affordable prices. Frequently your website is the first impression
-            your customers will get, so make sure it’s a good one.eel free to
-            reach out and say hello! I promise I don't bite 😉
+            I spend my days (and often nights) painting the Internet canvas with
+            PROJECTS and lines of code, turning zeroes and ones into immersive,
+            interactive experiences. I tread the path of minimalism, finding
+            beauty in simplicity and order. When I'm not crafting beautiful web
+            experiences, you can find me doing MMA,teaching kids how to fight .
+            anyways you can CONTACT ME. I provide custom designs at affordable
+            prices. Frequently your website is the first impression your
+            customers will get, so make sure it’s a good one, feel free to reach
+            out and say hello! I promise I don't bite 😉
           </p>
           <div className="academics">
             <div className="education">

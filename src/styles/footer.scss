@@ -2,7 +2,7 @@
 footer {
   padding: 1rem 1rem;
   font-weight: bold;
-  background: transparent;
+  background: black;
 
   box-shadow: $text-shadow;
   position: fixed;
@@ -38,7 +38,7 @@ footer {
 @media screen and (max-width: 768px) {
   footer {
     padding: 0;
-    position: initial;
+    // position: initial;
     // .footer-container {
     // flex-direction: column;
     // }

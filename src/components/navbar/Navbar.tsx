@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import useCursor from "../useCursor/useCursor";
+import { useState } from "react";
 function Navbar() {
   const { mousePosition, cursorVariant, textEnter, textLeave } = useCursor();
-
+  const [visible, setVisible] = useState(false); //for toggle options on button click
   const variants = {
     default: {
       x: mousePosition.x - 9,
@@ -48,8 +49,42 @@ function Navbar() {
           <Link to="contact">Contact</Link>
         </li>
       </ul>
-      <div className="toggle">
-        <button>toggle</button>
+      <button
+        className="toggle-btn"
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
+        onClick={() => setVisible(!visible)}
+      >
+        menu
+      </button>
+      <div className={`toggle-container ${visible ? "show" : "hidden"}`}>
+        {/* <div className="toggle-list"> */}
+        <ul className="toggle-ul">
+          <li onMouseEnter={textEnter} onMouseLeave={textLeave}>
+            {" "}
+            <Link to="about" onClick={() => setVisible(!visible)}>
+              About
+            </Link>
+          </li>
+          <li
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            onClick={() => setVisible(!visible)}
+          >
+            {" "}
+            <Link to="project">Projects</Link>
+          </li>
+          <li
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            onClick={() => setVisible(!visible)}
+          >
+            {" "}
+            <Link to="contact">Contact</Link>
+          </li>
+        </ul>
+
+        {/* </div> */}
       </div>
     </motion.nav>
   );

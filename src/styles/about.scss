@@ -22,12 +22,13 @@
       }
       .about-para {
         margin: 1rem 0;
-        width: 85%;
+        // width: 85%;
         color: rgb(182, 205, 204);
-        font-family: "Caveat";
-        font-size: 20px;
-        font-weight: 800;
-        text-align: right;
+        font-family: "Source";
+        font-size: 17px;
+        letter-spacing: 0.5px;
+
+        // text-align: right;
         animation: slideToTop 2s;
         // display: none;
       }
@@ -36,7 +37,7 @@
         margin-bottom: 2rem;
         display: grid;
         grid-template-columns: auto auto;
-        gap: 20%;
+        gap: 10%;
         font-family: monospace;
 
         & .education {
@@ -49,7 +50,7 @@
         & > div {
           //targets education and skills div
           // border: 0.5px solid gray;
-          padding: 1rem;
+          padding: 2rem;
           border-radius: 2rem;
           width: 25rem;
           // box-shadow: 0px 0.2px 5px wheat;
@@ -58,8 +59,10 @@
             padding: 0;
             text-align: left;
             color: whitesmoke;
-            font-size: 20px;
-            font-family: "Caveat";
+            font-size: 22px;
+            font-family: "Sigmar";
+            padding-bottom: 10px;
+            border-bottom: 2px solid white;
           }
           p {
             margin-left: 4px;
@@ -96,7 +99,7 @@
       margin: 6rem 1rem 1rem 0;
       text-align: right;
       font-family: "Caveat";
-      font-weight: 300;
+      // font-weight: 300;
       // animation: bigToSmall 2s;
     }
     &-images {
@@ -127,6 +130,9 @@
     &-para {
       margin: 0 auto;
       width: 90%;
+
+      font-size: 15px !important;
+      letter-spacing: -1px !important;
     }
     .academics {
       margin: 0;
@@ -136,7 +142,7 @@
 
       & > div {
         // border: 1px solid gray;
-        padding: 0.5rem;
+        padding: 1rem 0 !important;
         border-radius: 1rem;
         width: 80% !important;
         // box-shadow: 0px 0.1px 3px wheat;
@@ -153,7 +159,8 @@
     }
 
     .other-than-work {
-      font-size: 16px;
+      font-size: 19px;
+      letter-spacing: 1px;
       text-align: left !important;
       width: 100%;
       margin: 1rem auto !important;

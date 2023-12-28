@@ -21,6 +21,18 @@
   font-family: "Scribble";
   src: url("../../public/Rubik_Scribble/RubikScribble-Regular.ttf");
 }
+@font-face {
+  font-family: "Source";
+  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Regular.ttf");
+}
+@font-face {
+  font-family: "Source-bold";
+  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Bold.ttf");
+}
+@font-face {
+  font-family: "Source-italic";
+  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Italic.ttf");
+}
 $text-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 $bg-blue: #f6ffff;
 $bg-black: #042a2a;

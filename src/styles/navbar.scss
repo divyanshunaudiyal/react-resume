@@ -15,18 +15,6 @@ nav {
 
   background: black;
 
-  // .cursor {
-  //   background-color: rgb(219, 137, 30);
-  //   height: 16px;
-  //   width: 16px;
-  //   border-radius: 50%;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   pointer-events: none;
-  //   /* z-index: 9999999999; */
-  // }
-
   .logo {
     position: relative;
     a {
@@ -96,26 +84,21 @@ nav {
           background: wheat;
           transition: 1s;
         }
-        // &:hover {
-        //   // color: $highlight;
-        // }
       }
     }
   }
-}
-.toggle {
-  // color: wheat;
-  // background: wheat;
-  display: none;
-  button {
-    color: wheat;
+  .toggle-btn {
+    display: none;
+  }
+  .toggle-container {
+    // opacity: 0;
   }
 }
 
 @media screen and (max-width: 1024px) {
   nav {
     width: 100vw;
-    // display: block;
+
     text-align: center;
     font-size: 1rem;
     height: 8%;
@@ -130,14 +113,11 @@ nav {
     }
     .links {
       display: none;
-
       a:hover {
         transform: scale(1.2);
       }
     }
-    .toggle {
-      display: block;
-    }
+
     button {
       border: none;
       background: transparent;
@@ -145,5 +125,39 @@ nav {
         outline: none;
       }
     }
+    .toggle-btn {
+      display: block !important;
+      color: wheat;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .toggle-container {
+      // opacity: 1;
+      width: 100vw;
+      position: absolute;
+      top: 4rem !important;
+      height: 100vh;
+      background: beige;
+      transition: opacity 1s;
+
+      ul {
+        // height: 100%;
+        grid-template-columns: auto;
+        li {
+          a {
+            color: black;
+          }
+        }
+      }
+    }
   }
+}
+
+.hidden {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
 }

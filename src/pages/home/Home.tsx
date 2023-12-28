@@ -30,17 +30,11 @@ function Home() {
     <div className={`home `} id="home">
       <div className="home__pic"></div>
       <div className="home__text">
-        <h1>
-          <span>Frontend Developer</span>
-        </h1>
+        <h1>Frontend Developer</h1>
 
         <p>
-          I spend my days (and often nights) painting the Internet canvas with
-          PROJECTS and lines of code, turning zeroes and ones into immersive,
-          interactive experiences. I tread the path of minimalism, finding
-          beauty in simplicity and order. When I'm not crafting beautiful web
-          experiences, you can find me doing MMA,teaching kids how to fight .
-          anyways you can CONTACT ME
+          Hi my name is Divyanshu Naudiyal. I am a frontend developer from
+          Dehradun , Uttarakhand , India 📍
         </p>
 
         <p className="language-icons">
