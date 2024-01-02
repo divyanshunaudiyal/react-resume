@@ -125,7 +125,7 @@ nav {
       }
       .toggle-btn {
         display: block !important;
-        color: rgb(255, 166, 0);
+        color: bisque;
         cursor: none;
 
         &:focus {
@@ -137,12 +137,12 @@ nav {
         position: absolute;
         top: 2.5rem !important;
         height: 100vh;
-        background: rgb(12, 10, 0);
+        // background: rgb(12, 10, 0);
         transition: opacity 1s;
         font-family: "Sigmar";
         overflow-y: hidden;
         z-index: 9 !important;
-        background-color: rgb(6, 67, 67);
+        background-color: rgb(29, 148, 148);
         ul {
           // text-align: right;
           grid-template-columns: auto;
@@ -150,7 +150,7 @@ nav {
 
           li {
             a {
-              color: rgb(255, 255, 255);
+              color: rgb(243, 243, 243);
             }
           }
         }

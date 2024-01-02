@@ -31,12 +31,12 @@ function Home() {
       <div className="home__pic"></div>
       <div className="home__text">
         <h1>
-          Hi, I am <span className="name">Divyanshu Naudiyal</span>
+          <span className="name">Divyanshu Naudiyal</span>
         </h1>
 
         <p>
-          Frontend focused web developer with a passion for crafting dynamic and
-          responsive user interfaces
+          Front end software developement from Dehradun, Uttarakhand. With a
+          particular passion for design, creativity and communication.
         </p>
 
         <p className="language-icons">

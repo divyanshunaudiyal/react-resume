@@ -1,171 +1,122 @@
 @use "./global.scss" as *;
-.about-container {
+.about {
   width: 100vw;
-  background-color: cadetblue;
-  border-radius: 2rem;
-  .about {
-    margin: 2rem auto;
-    padding-top: 6rem;
-    display: grid;
-    grid-template-columns: auto;
+  // background-color: cadetblue;
+  // border-radius: 2rem;
+  overflow: hidden;
+  margin: 4rem 0;
 
-    align-items: center;
+  h1 {
+    // margin: 4rem 0;
+    padding: 3rem 0 0 0;
+    @include page-heading;
+    text-align: center;
+  }
+
+  &_technical {
+    display: flex;
+    // height: 90vh;
     justify-content: center;
-    animation: fadeIn 2s;
-
-    &-text {
-      width: min-content; //not including will expand para below about and
-      border-bottom: 5px solid rgb(47, 47, 47);
-      .about-heading {
-        @include page-heading;
-        text-align: center;
-      }
-      .about-details {
-        margin: 4rem 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .about-para {
-          width: 75%;
-          // text-align: left;
-          // margin: 2rem 0;
-          color: rgb(250, 255, 255);
-          font-family: "Source-italic";
-          font-size: 15px;
-          letter-spacing: -0.25px;
-          animation: slideToTop 2s;
-        }
-      }
-
-      & .academics {
-        width: 80vw;
-        margin-bottom: 2rem;
-        display: grid;
-        grid-template-columns: auto auto;
-
-        justify-content: space-evenly;
-
-        & .education {
-          animation: slideToLeft 2s;
-        }
-        .skills {
-          animation: slideToRight 2s;
-        }
-
-        & > div {
-          h1 {
-            margin: 0;
-            padding: 0;
-            text-align: left;
-            color: whitesmoke;
-            font-size: 22px;
-            font-family: "Sigmar";
-            padding-bottom: 10px;
-            // border-bottom: 2px solid white;
-          }
-          p {
-            margin-left: 4px;
-          }
-          span {
-            display: block;
-            color: white;
-            margin-bottom: 10px;
-            font-family: "Source-italic";
-          }
-        }
-      }
-
-      .resume {
-        font-size: 15px;
-        color: rgb(255, 255, 255);
-        animation: adjustSpacingSmall 5s;
-        letter-spacing: 1px;
-        a {
-          color: goldenrod;
-        }
-      }
-    }
-    .extra {
-      opacity: 0;
-    }
-    // .visible {
-    //   animation: fadeIn 3s forwards;
-    // }
-    .other-than-work {
-      color: white;
-      padding: 0;
-      margin: 0;
-      margin: 2rem 1rem 1rem 0;
-      text-align: right;
-      font-family: "Caveat";
-    }
-    &-images {
-      overflow: hidden;
-      display: flex;
-      gap: 1rem;
-
+    align-items: center;
+    margin: 4rem 0;
+    .image {
+      width: 25rem; // height: 100%;
       img {
-        width: 10rem;
-        height: 9rem;
         border-radius: 2rem;
+        width: 90%;
+        height: 90%;
+        animation: fadeIn 5.5s;
       }
+    }
+    & .details {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins-light";
+      letter-spacing: 0.2px;
+      color: rgb(255, 255, 243);
+      gap: 2rem;
+      padding-bottom: 2rem;
+      position: relative; //for ::after
+
+      // font-size: 15px;
+
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        animation: fadeIn 3s;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        animation: slideToLeft 1s;
+      }
+      // gap: 2rem;
+    }
+  }
+
+  &_extra-curriculur {
+    opacity: 0;
+    margin: 4rem auto;
+    width: 75%;
+    font-family: "Poppins-light";
+    letter-spacing: 0.2px;
+    color: rgb(255, 255, 243);
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 2px;
+      width: 50%;
+      left: 25%;
+      top: -1rem;
+      background: white;
+      position: absolute;
+      // top: 0;
+    }
+
+    p {
+      margin: 4rem;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .about {
-    margin: 5rem auto !important;
+    &_technical {
+      flex-direction: column;
+      // text-align: center;
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin: 0 auto;
+          width: 80%;
+        }
+      }
 
-    width: 90%;
-    margin: 0 auto;
+      .details {
+        width: 90%;
+        letter-spacing: 0;
 
-    &-text {
-      width: initial !important;
-    }
-
-    &-para {
-      margin: 0 auto;
-      width: 100%;
-      text-align: center;
-      font-size: 15px !important;
-      letter-spacing: -1px !important;
-    }
-    .academics {
-      margin: 0;
-
-      gap: 1.5rem !important;
-      justify-content: center;
-
-      & > div {
-        padding: 1rem 0 !important;
-        border-radius: 1rem;
-        width: 80% !important;
-
+        h2 {
+          font-size: 30px;
+          text-align: center;
+        }
         p {
-          font-size: 15px !important;
-          letter-spacing: -1px !important;
-          span {
-          }
+          font-size: 14px;
         }
       }
     }
-    .resume {
-      animation: none !important;
-    }
-    &-images {
-      flex-direction: column;
-      img {
-        margin: 0 auto;
-      }
-    }
-
-    .other-than-work {
-      font-size: 19px;
-      letter-spacing: 1px;
-      text-align: left !important;
+    &_extra-curriculur {
       width: 100%;
-      margin: 1rem auto !important;
+
+      p {
+        // text-align: center;
+        margin: 2rem 1rem;
+        font-size: 14px;
+      }
     }
   }
 }

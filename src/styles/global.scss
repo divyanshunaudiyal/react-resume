@@ -47,6 +47,18 @@
   font-family: "Source-italic";
   src: url("../../public/Source_Code_Pro/static/SourceCodePro-Italic.ttf");
 }
+@font-face {
+  font-family: "Poppins-light";
+  src: url("../../public/Poppins/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Poppins-bold";
+  src: url("../../public/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/Poppins/Poppins-Regular.ttf");
+}
 $text-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 $bg-blue: #f6ffff;
 $bg-black: #042a2a;
@@ -90,4 +102,8 @@ body {
 
 .visible {
   animation: fadeIn 3s forwards;
+}
+.slideToTop {
+  opacity: 1;
+  animation: slideToTop 2s;
 }

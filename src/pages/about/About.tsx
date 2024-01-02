@@ -2,31 +2,27 @@ import { useEffect, useState } from "react";
 
 function About() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOutOfView, setIsOutOfView] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const boundingBox = document
-        .querySelector(".about-images")!
+        .querySelector(".about_extra-curriculur")!
         .getBoundingClientRect();
 
       if (boundingBox.top < window.innerHeight && boundingBox.bottom >= 0) {
         const extra = document.querySelector(".extra");
         if (extra) {
           extra.classList.add("fadeIn");
-          extra.classList.remove("slideToTop");
         }
 
         setIsScrolled(true);
-        setIsOutOfView(false);
       } else {
         const extra = document.querySelector(".extra");
         if (extra) {
           extra.classList.remove("fadeIn");
-          extra.classList.add("slideToTop");
         }
 
         setIsScrolled(false);
-        setIsOutOfView(true);
       }
     };
 
@@ -40,64 +36,38 @@ function About() {
   }, []);
 
   return (
-    <section className="about-container">
-      <div className="about">
-        <div className="about-text">
-          <h1 className="about-heading">Who's this?</h1>
-          <div className="about-details">
-            <p className="about-para">
-              I spend my days (and often nights) painting the Internet canvas
-              with PROJECTS and lines of code, turning zeroes and ones into
-              immersive, interactive experiences. I tread the path of
-              minimalism, finding beauty in simplicity and order. When I'm not
-              crafting beautiful web experiences, you can find me doing
-              MMA,teaching kids how to fight . anyways you can CONTACT ME. I
-              provide custom designs at affordable prices. Frequently your
-              website is the first impression your customers will get, so make
-              sure it’s a good one, feel free to reach out and say hello! I
-              promise I don't bite 😉
-            </p>
-            <div className="academics">
-              <div className="education">
-                <h1>EDUCATION</h1>
-                <p>
-                  <span>Graphic Era Deemed To Be University</span>
-                  <span>Btech Cs </span>
-                  <span>2017-2021</span>
-                  <span>Dehradun</span>
-                </p>
-              </div>
-              <div className="skills">
-                <h1>SKILLS</h1>
-                <p>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>ReactJs</span>
-                  <span>SASS</span>
-                  <span>Bootstrap</span>
-                  <span>Responsive Design</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="resume">
-            click here to download <a href="">resume</a>
-          </h3>
+    <section className="about">
+      <h1>Who's this?</h1>
+      <div className="about_technical">
+        <div className="image">
+          <img src="public/1.jpeg" alt="" />
         </div>
-
-        <div className={` extra ${isScrolled ? "visible" : ""}`}>
-          <h2 className="other-than-work">
-            When not working , you'll find me hopping cafes, training MMA and
-            teaching to fight or in the mountains. trails.
-          </h2>
-          <div className="about-images">
-            <img src="./danda.jpeg" alt="" />
-            <img src="./cafe.jpeg" alt="" />
-            <img src="./cafe.jpeg" alt="" />
-          </div>
+        <div className="details">
+          <h2>Namaste 🙏🏻</h2>
+          <p>
+            I'm Divyanshu Naudiyal, a passionate React developer with a solid
+            foundation in HTML, CSS, JavaScript, Sass, Bootstrap, and React.
+            Holding a degree in Computer Science from Graphic Era University,
+            I've embarked on a journey to craft engaging and immersive web
+            experiences.
+          </p>
+          <p>
+            {" "}
+            I strive to create visually compelling digital experiences. Each
+            line of code is an opportunity to bring a unique vision to life,
+            weaving together aesthetics and functionality seamlessly.{" "}
+          </p>
         </div>
+      </div>
+      <div
+        className={`about_extra-curriculur ${isScrolled ? "slideToTop" : ""}`}
+      >
+        <p>
+          Apart from crafting code, I'm deeply passionate about Mixed Martial
+          Arts. As a coach in a local gym, I guide aspiring fighters. Beyond the
+          digital realm, I thrive on high-altitude hikes, coffee, and
+          exploration—an adventurous balance to my tech-centric world.
+        </p>
       </div>
     </section>
   );

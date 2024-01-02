@@ -1,46 +1,9 @@
 // import { useEffect, useState } from "react";
-import { motion, Variants } from "framer-motion";
-import useCursor from "../useCursor/useCursor";
+// import { motion, Variants } from "framer-motion";
+// import useCursor from "../useCursor/useCursor";
 function Footer() {
-  const { mousePosition, cursorVariant, textEnter, textLeave } = useCursor();
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // }); //set mouseposition to 0,0 position
-  // const [cursorVariant, setCursorVariant] = useState("default"); // cursor to default,when hovering will be changed to text
-  // useEffect(() => {
-  //   const mouseMove = (e: MouseEvent) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //     // set mouseposition to current position
-  //   };
-
-  //   window.addEventListener("mousemove", mouseMove);
-  //   // on mouse move call mouseMove function to set positon of cursor
-
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, []);
-
-  // const variants = {
-  //   default: {
-  //     x: mousePosition.x - 9,
-  //     y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
-  //   },
-  //   text: {
-  //     height: 50,
-  //     width: 50,
-  //     x: mousePosition.x - 25,
-  //     y: mousePosition.y - 25, // size 50 , so -25
-  //     background: "green",
-  //     mixBlendMode: "difference",
-  //   },
-  // };
-  // const textEnter = () => setCursorVariant("text");
-  // const textLeave = () => setCursorVariant("default");
-
   return (
-    <motion.footer>
+    <footer>
       <div className="footer-container">
         <div className="copyright">
           <p>Copyright &copy; 2023 DN</p>
@@ -49,8 +12,6 @@ function Footer() {
           <a
             href="https://www.linkedin.com/in/divyanshunaudiyal/"
             target="_blank"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,12 +32,7 @@ function Footer() {
               <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
             </svg>
           </a>
-          <a
-            href="https://github.com/divyanshunaudiyal"
-            target="_blank"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
-          >
+          <a href="https://github.com/divyanshunaudiyal" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -94,7 +50,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
 

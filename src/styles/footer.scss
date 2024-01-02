@@ -1,18 +1,25 @@
 @use "./global.scss" as *;
 footer {
-  display: none;
+  // display: none;
   padding: 1rem;
   font-weight: bold;
-  background: transparent;
+  background: black;
 
   box-shadow: $text-shadow;
   position: fixed;
-  right: 0;
+  bottom: 0;
   width: 100vw;
   .footer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .copyright {
+      p {
+        color: seashell;
+        font-size: 10px;
+      }
+    }
   }
 
   .social-profiles {

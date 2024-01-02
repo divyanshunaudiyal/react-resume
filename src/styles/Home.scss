@@ -14,12 +14,13 @@
 
   &::after {
     content: "";
-    width: 100%;
+    width: 60%;
     position: absolute;
-    bottom: -20%;
+    left: 20%;
+    bottom: -10%;
 
-    height: 1px;
-    background: wheat;
+    height: 0.5px;
+    background: rgb(71, 71, 71);
   }
   &__text {
     width: 30rem;
@@ -35,28 +36,34 @@
       padding: 0;
       animation: bigToSmall 1.5s;
       font-size: 26px;
+      position: relative;
+      // // &::after {
+      // //   content: " Dehradun based frontend developer";
+      // //   color: grey;
+      // //   font-size: 12px;
+      // //   text-transform: uppercase;
+      // //   margin-left: 25%;
+      // }
 
       .name {
         color: $text-blue;
-        font-family: "Caveat";
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        font-size: 53.5px;
+        font-family: "Poppins";
+        letter-spacing: -1.5px;
+        word-spacing: -1.5px;
+        font-size: 47.5px;
+        text-transform: uppercase;
       }
     }
     p {
+      color: rgb(229, 229, 229);
       margin: 0;
-      font-family: "Helvetica";
-      font-size: 16px;
-      letter-spacing: 0.45px;
-      // word-spacing: 1.5px;
+      font-family: "Poppins-light";
+      font-size: 14px;
+      letter-spacing: 0.25px;
+      word-spacing: 1.5px;
       animation: slideToTop 2s;
       line-height: 1.6;
       // text-shadow: 0.6px 0.5px 3px cadetblue;
-    }
-    p.language-icons {
-      // display: flex;
-      // justify-content: center;
     }
   }
   &__pic {
@@ -105,7 +112,8 @@
       p {
         // width: 85%;
         margin: 0.5rem auto;
-        font-size: 14px;
+        font-size: 12px;
+        width: 80%;
         img {
           width: 90%;
           margin: 10px 0 0;

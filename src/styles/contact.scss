@@ -5,7 +5,7 @@
   width: 100vw;
 
   overflow: hidden;
-  background: cadetblue;
+  // background: cadetblue;
   padding: 4rem 0 4rem 0;
   border-radius: 2rem;
   .contact-container {
@@ -17,13 +17,16 @@
     animation: fadeIn 2s;
 
     .contact-heading {
-      margin-left: 2rem;
+      // margin-left: 2rem;
       @include page-heading;
+      margin: 1rem 0;
     }
     .mail {
       animation: slideToRight 2.25s;
       color: rgb(212, 212, 212);
+      font-family: "Poppins-light";
       a {
+        margin: 0 2px;
         font-family: "Source-italic";
         color: rgb(247, 176, 35);
       }
@@ -42,25 +45,25 @@
     }
     label input {
       text-transform: uppercase;
-      letter-spacing: 3px;
+      letter-spacing: 5px;
       line-height: 1.8em;
       width: 100%;
       /*  */
       background: transparent;
       color: #999;
-      font-size: 14px;
-      padding: 16px;
-      border: none;
-      border-bottom: 1px solid;
-      border-bottom-color: rgba(12, 12, 12, 0.3);
+      font-size: 12px;
+      padding: 1rem 2.5rem;
+      // border: none;
+      border: 0.5px solid rgb(58, 57, 57);
+      // border-bottom-color: rgba(12, 12, 12, 0.3);
       border-radius: 1rem;
     }
     label input:focus {
       outline: none;
-      color: rgb(53, 39, 3);
-      border-bottom: 1px solid goldenrod;
-      transition: 1s;
-      background: rgb(255, 255, 255);
+      color: rgb(203, 203, 203);
+      // border-bottom: 1px solid goldenrod;
+      transition: 2s;
+      // background: rgb(80, 80, 80);
     }
     //adding animation toeach input separately
 
@@ -84,16 +87,21 @@
 
 @media screen and (max-width: 768px) {
   .contact {
-    margin: auto 0;
+    // margin: 1rem;
     display: flex;
     // height: 48rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 
+    input {
+      width: 80% !important;
+      padding: 0rem;
+    }
     &__info,
     .phone,
     .mail {
+      font-size: 14px;
       padding: 0.5rem;
     }
   }
