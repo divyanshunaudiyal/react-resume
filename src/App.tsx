@@ -5,28 +5,12 @@ import Layout from "./Layout.jsx";
 import Contact from "./pages/contact/Contact.tsx";
 import About from "./pages/about/About.tsx";
 import Project from "./pages/project/Project.tsx";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import { Variants, motion } from "framer-motion";
+// import useCursor from "./components/useCursor/useCursor.js";
 function App() {
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // }); //set mouseposition to 0,0 position
-  // const [cursorVariant, setCursorVariant] = useState("default"); // cursor to default,when hovering will be changed to text
-  // useEffect(() => {
-  //   const mouseMove = (e: MouseEvent) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //     // set mouseposition to current position
-  //   };
-
-  //   window.addEventListener("mousemove", mouseMove);
-  //   // on mouse move call mouseMove function to set positon of cursor
-
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, []);
-
+  // const { mousePosition, cursorVariant, textEnter, textLeave } = useCursor();
+  // const [visible, setVisible] = useState(false); //for toggle options on button click
   // const variants = {
   //   default: {
   //     x: mousePosition.x - 9,
@@ -41,9 +25,6 @@ function App() {
   //     mixBlendMode: "difference",
   //   },
   // };
-  // const textEnter = () => setCursorVariant("text");
-  // const textLeave = () => setCursorVariant("default");
-
   return (
     <>
       {/* <motion.div

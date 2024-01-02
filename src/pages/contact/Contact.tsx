@@ -3,31 +3,31 @@ import { motion, Variants } from "framer-motion";
 function Contact() {
   const { mousePosition, cursorVariant, textEnter, textLeave } = useCursor();
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 9,
-      y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
-    },
-    text: {
-      height: 50,
-      width: 50,
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25, // size 50 , so -25
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x - 9,
+  //     y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
+  //   },
+  //   text: {
+  //     height: 50,
+  //     width: 50,
+  //     x: mousePosition.x - 25,
+  //     y: mousePosition.y - 25, // size 50 , so -25
 
-      background: "cadetblue",
-      mixBlendMode: "difference",
-    },
-  };
+  //     background: "cadetblue",
+  //     mixBlendMode: "difference",
+  //   },
+  // };
 
   return (
     <motion.div className="contact">
-      <motion.div
+      {/* <motion.div
         className="cursor"
         variants={variants as Variants}
         animate={cursorVariant}
-      ></motion.div>
+      ></motion.div> */}
       <div className="contact-container">
-        <h1 className="contact-h1">Contact </h1>
+        <h1 className="contact-heading">Get in touch.</h1>
         <h3 className="mail">
           Shoot an email{" "}
           <a

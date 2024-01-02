@@ -1,8 +1,11 @@
 @use "./global.scss" as *;
 .about-container {
   width: 100vw;
+  background-color: cadetblue;
+  border-radius: 2rem;
   .about {
-    margin: 8rem auto;
+    margin: 2rem auto;
+    padding-top: 6rem;
     display: grid;
     grid-template-columns: auto;
 
@@ -12,33 +15,35 @@
 
     &-text {
       width: min-content; //not including will expand para below about and
+      border-bottom: 5px solid rgb(47, 47, 47);
       .about-heading {
-        letter-spacing: 5px;
-        color: rgb(239 176 176);
-        font-size: 40px;
-        font-family: "Sigmar";
-        animation: adjustSpacing 1.25s, slideToRight 1.5s;
-        text-align: left;
+        @include page-heading;
+        text-align: center;
       }
-      .about-para {
-        margin: 1rem 0;
-        // width: 85%;
-        color: rgb(182, 205, 204);
-        font-family: "Source";
-        font-size: 17px;
-        letter-spacing: 0.5px;
-
-        // text-align: right;
-        animation: slideToTop 2s;
-        // display: none;
+      .about-details {
+        margin: 4rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .about-para {
+          width: 75%;
+          // text-align: left;
+          // margin: 2rem 0;
+          color: rgb(250, 255, 255);
+          font-family: "Source-italic";
+          font-size: 15px;
+          letter-spacing: -0.25px;
+          animation: slideToTop 2s;
+        }
       }
 
       & .academics {
+        width: 80vw;
         margin-bottom: 2rem;
         display: grid;
         grid-template-columns: auto auto;
-        gap: 10%;
-        font-family: monospace;
+
+        justify-content: space-evenly;
 
         & .education {
           animation: slideToLeft 2s;
@@ -48,12 +53,6 @@
         }
 
         & > div {
-          //targets education and skills div
-          // border: 0.5px solid gray;
-          padding: 2rem;
-          border-radius: 2rem;
-          width: 25rem;
-          // box-shadow: 0px 0.2px 5px wheat;
           h1 {
             margin: 0;
             padding: 0;
@@ -62,7 +61,7 @@
             font-size: 22px;
             font-family: "Sigmar";
             padding-bottom: 10px;
-            border-bottom: 2px solid white;
+            // border-bottom: 2px solid white;
           }
           p {
             margin-left: 4px;
@@ -70,8 +69,8 @@
           span {
             display: block;
             color: white;
-            margin-bottom: 2px;
-            // animation: slideToLeft 2s;
+            margin-bottom: 10px;
+            font-family: "Source-italic";
           }
         }
       }
@@ -89,24 +88,22 @@
     .extra {
       opacity: 0;
     }
-    .visible {
-      animation: fadeIn 3s forwards;
-    }
+    // .visible {
+    //   animation: fadeIn 3s forwards;
+    // }
     .other-than-work {
       color: white;
       padding: 0;
       margin: 0;
-      margin: 6rem 1rem 1rem 0;
+      margin: 2rem 1rem 1rem 0;
       text-align: right;
       font-family: "Caveat";
-      // font-weight: 300;
-      // animation: bigToSmall 2s;
     }
     &-images {
       overflow: hidden;
       display: flex;
       gap: 1rem;
-      // animation: slideToTop 2s;
+
       img {
         width: 10rem;
         height: 9rem;
@@ -119,7 +116,7 @@
 @media screen and (max-width: 768px) {
   .about {
     margin: 5rem auto !important;
-    // padding-top: 3rem;
+
     width: 90%;
     margin: 0 auto;
 
@@ -129,23 +126,28 @@
 
     &-para {
       margin: 0 auto;
-      width: 90%;
-
+      width: 100%;
+      text-align: center;
       font-size: 15px !important;
       letter-spacing: -1px !important;
     }
     .academics {
       margin: 0;
-      // grid-template-columns: auto !important;
+
       gap: 1.5rem !important;
       justify-content: center;
 
       & > div {
-        // border: 1px solid gray;
         padding: 1rem 0 !important;
         border-radius: 1rem;
         width: 80% !important;
-        // box-shadow: 0px 0.1px 3px wheat;
+
+        p {
+          font-size: 15px !important;
+          letter-spacing: -1px !important;
+          span {
+          }
+        }
       }
     }
     .resume {

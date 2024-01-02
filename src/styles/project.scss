@@ -1,30 +1,54 @@
 @use "./global.scss" as *;
-.project {
-  //   padding: 10rem 1rem 7rem 1rem;
-  font-size: 62.5%;
-  font-family: Poppins, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 
-  display: grid;
-  gap: 5rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  height: auto;
-  //   width: 100%;
-  text-align: center;
-  justify-content: center;
+.project {
+  margin: 8rem auto;
+
+  animation: fadeIn 2s;
+
+  overflow: hidden;
 
   .project-container {
-    span {
-      color: #23621c;
+    .project-heading {
+      @include page-heading;
+      text-align: center;
     }
-    padding: 10rem;
-    position: relative;
-    &__project1 {
+    & .project-img {
+      //contains image and text
+      position: relative;
+    }
+    &__project1,
+    &__project2 {
+      display: grid;
+      grid-template-columns: auto;
+      justify-items: center;
+      align-items: center;
       @include about;
-      height: 20rem;
+
+      .project-text {
+        width: 50%;
+
+        text-align: center;
+        color: white;
+        background: transparent;
+        font-family: "Caveat-bold";
+        display: grid; //for styling project heading and languages
+        grid-template-columns: auto auto;
+
+        .languages {
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 1rem;
+          align-items: center;
+
+          & > div {
+            background: rgb(90, 90, 90);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    &__project1 {
       .project-img {
         border-radius: 1rem;
         box-shadow: $text-shadow;
@@ -43,18 +67,22 @@
         }
       }
       .project-info {
+        display: none;
         width: 50%;
       }
     }
     &__project2 {
-      @include about;
-
-      video {
+      .project-text .languages {
+        grid-template-columns: auto auto auto; //languages used in recipe project
+      }
+      .project-img {
         border-radius: 1rem;
         box-shadow: $text-shadow;
-        width: 45rem;
-        height: 20rem;
+        width: 50%;
         overflow: hidden;
+        video {
+          width: 100%; //video in recipe project
+        }
       }
     }
   }
@@ -63,49 +91,25 @@
 @media screen and (max-width: 768px) {
   .project {
     width: 100vw;
-    font-size: 50%;
-
+    font-size: 40%;
+    margin: 3rem auto;
     .project-container {
-      padding: 10rem 0 0 0;
-      h1 {
-        font-size: 1.5rem;
-      }
-
       &__project1 {
         margin: 0;
         padding: 0;
         padding-top: 2rem;
         flex-direction: column;
-        .project-img {
-          // border-radius: 0;
-          width: 90%;
-          height: initial;
-        }
-        .project-info {
-          width: 45%;
 
-          h1 {
-            color: rgb(0, 106, 118);
-          }
+        .project-img {
+          width: 90%;
+          height: 15rem;
         }
       }
-
       &__project2 {
         margin: 3rem 0 0 0;
         padding: 0;
-        // padding-top: 2rem;
 
-        flex-direction: column;
-
-        .project-info {
-          width: 45%;
-
-          h1 {
-            color: rgb(0, 106, 118);
-          }
-        }
-
-        video {
+        .project-img {
           width: 90%;
         }
       }

@@ -22,30 +22,25 @@ function Footer() {
   //   };
   // }, []);
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 9,
-      y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
-    },
-    text: {
-      height: 50,
-      width: 50,
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25, // size 50 , so -25
-      background: "green",
-      mixBlendMode: "difference",
-    },
-  };
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x - 9,
+  //     y: mousePosition.y - 9, //size of cursor is 32px so to center it do -16
+  //   },
+  //   text: {
+  //     height: 50,
+  //     width: 50,
+  //     x: mousePosition.x - 25,
+  //     y: mousePosition.y - 25, // size 50 , so -25
+  //     background: "green",
+  //     mixBlendMode: "difference",
+  //   },
+  // };
   // const textEnter = () => setCursorVariant("text");
   // const textLeave = () => setCursorVariant("default");
 
   return (
     <motion.footer>
-      <motion.div
-        className="cursor"
-        variants={variants as Variants}
-        animate={cursorVariant}
-      ></motion.div>
       <div className="footer-container">
         <div className="copyright">
           <p>Copyright &copy; 2023 DN</p>

@@ -7,14 +7,27 @@
 
 * {
   cursor: none;
+  /* background: azure; */
 }
 .cursor {
-  background-color: cadetblue;
-  height: 18px;
-  width: 18px;
+  background-color: rgb(243, 166, 23);
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 9999999 !important;
 }
+/* .cursor::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+} */

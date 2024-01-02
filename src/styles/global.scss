@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Helvetica";
+  src: url("../../public/Free-Sans/FreeSans.ttf");
+}
+@font-face {
+  font-family: "Helvetica-bold";
+  src: url("../../public/Free-Sans/FreeSansBold.ttf");
+}
+@font-face {
   font-family: "Caveat";
   src: url("../../public/Caveat/static/Caveat-Regular.ttf");
   font-weight: 300;
@@ -9,6 +17,11 @@
   font-weight: 800;
 }
 @font-face {
+  font-family: "Caveat-bold";
+  src: url("../../public/Caveat/static/Caveat-SemiBold.ttf");
+  // font-weight: 800;
+}
+@font-face {
   font-family: "Archivo";
   src: url("../../public/Archivo_Narrow/static/ArchivoNarrow-Regular.ttf");
   font-weight: 600;
@@ -17,6 +30,7 @@
   font-family: "Sigmar";
   src: url("../../public/Sigmar/Sigmar-Regular.ttf");
 }
+
 @font-face {
   font-family: "Scribble";
   src: url("../../public/Rubik_Scribble/RubikScribble-Regular.ttf");
@@ -38,37 +52,42 @@ $bg-blue: #f6ffff;
 $bg-black: #042a2a;
 $bg-white: #ffffff;
 $highlight: rgb(19, 141, 141);
-$text-blue: #0e72a5;
+$text-blue: #1e9999;
+$text-grey: rgb(233 233 233);
 @mixin about {
   margin: 4rem 0 0 0;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
-  padding: 2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
 }
+@mixin page-heading {
+  letter-spacing: 5px;
 
+  font-size: 40px;
+  font-family: "Sigmar";
+  animation: adjustSpacing 1.25s, slideToRight 1.5s;
+  color: #252c2c;
+  margin: 1rem auto;
+}
 body {
-  font-family: "Archivo";
+  font-family: "Helvetica";
 }
 
 // animation classes
 
-.leftToRight {
+.slideToRight {
   opacity: 1;
-  animation: leftToRight 1.5s forwards ease-in-out;
+  animation: slideToRight 1.5s forwards;
 }
-/* right to left */
-.rightToLeft {
+
+.slideToLeft {
   opacity: 1;
-  animation: rightToLeft 1s forwards ease-in-out;
+  animation: slideToLeft 1s forwards;
 }
-/* for card to animate from bottom to top */
-.fadeToTop {
-  animation: fadeInFromBottom 1.5s forwards ease-in;
-}
+
 .fadeIn {
   animation: fadeIn 1s ease-in;
+}
+
+.visible {
+  animation: fadeIn 3s forwards;
 }

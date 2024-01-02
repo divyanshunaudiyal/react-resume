@@ -1,21 +1,13 @@
 @use "./global.scss" as *;
 @use "./keyframes.scss";
 
-// .contact-cursor {
-//   background-color: wheat;
-//   height: 18px;
-//   width: 18px;
-//   border-radius: 50%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   pointer-events: none;
-// }
 .contact {
   width: 100vw;
 
   overflow: hidden;
-
+  background: cadetblue;
+  padding: 4rem 0 4rem 0;
+  border-radius: 2rem;
   .contact-container {
     margin: 0 auto;
     display: grid;
@@ -24,21 +16,15 @@
     justify-content: center;
     animation: fadeIn 2s;
 
-    .contact-h1 {
-      // left: 10rem;
-      margin: 1rem auto;
-      letter-spacing: 5px;
-      color: #8dcce6;
-      font-size: 40px;
-      font-family: "Sigmar";
-      animation: adjustSpacing 1.25s, slideToRight 1.5s;
-      width: 20rem;
-      // position: absolute;
+    .contact-heading {
+      margin-left: 2rem;
+      @include page-heading;
     }
     .mail {
       animation: slideToRight 2.25s;
       color: rgb(212, 212, 212);
       a {
+        font-family: "Source-italic";
         color: rgb(247, 176, 35);
       }
     }
@@ -104,9 +90,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    // height: 100vw;
-    // margin-top: 10rem;
-    // margin-bottom: 20rem;
+
     &__info,
     .phone,
     .mail {
@@ -114,5 +98,3 @@
     }
   }
 }
-
-// animated classes

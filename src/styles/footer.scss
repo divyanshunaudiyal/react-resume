@@ -1,21 +1,18 @@
 @use "./global.scss" as *;
 footer {
-  padding: 1rem 1rem;
+  display: none;
+  padding: 1rem;
   font-weight: bold;
-  background: black;
+  background: transparent;
 
   box-shadow: $text-shadow;
   position: fixed;
-  bottom: 0;
+  right: 0;
   width: 100vw;
   .footer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    // @media screen and (max-width: 678px) {
-    //   flex-direction: column;
-    // }
   }
 
   .social-profiles {
@@ -38,9 +35,5 @@ footer {
 @media screen and (max-width: 768px) {
   footer {
     padding: 0;
-    // position: initial;
-    // .footer-container {
-    // flex-direction: column;
-    // }
   }
 }
