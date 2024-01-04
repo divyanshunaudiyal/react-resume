@@ -35,7 +35,7 @@ function Home() {
         </h1>
 
         <p>
-          Front end software developement from Dehradun, Uttarakhand. With a
+          Front end React developer from Dehradun, Uttarakhand. With a
           particular passion for design, creativity and communication.
         </p>
 

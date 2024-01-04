@@ -1,4 +1,27 @@
+import { useEffect, useState } from "react";
+
 function Project() {
+  const [isProjectScrolled, setIsProjectScrolled] = useState(false);
+  useEffect(() => {
+    const handleProjectScroll = () => {
+      const boundingBox = document
+        .querySelector(".project-container__project2")!
+        .getBoundingClientRect();
+
+      if (boundingBox.top < window.innerHeight && boundingBox.bottom >= 0) {
+        setIsProjectScrolled(true);
+      } else {
+        setIsProjectScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleProjectScroll);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", handleProjectScroll);
+    };
+  }, []);
   return (
     <section className="project">
       <div className="project-container">
@@ -15,7 +38,11 @@ function Project() {
             <img src="/carrent-image.jpg" alt="rent-a-car image" />
           </div>
         </div>
-        <div className="project-container__project2">
+        <div
+          className={`project-container__project2 ${
+            isProjectScrolled ? "fadeIn" : " "
+          }`}
+        >
           <div className={`project-text `}>
             <h1>Find your recipe</h1>
             <div className="languages">

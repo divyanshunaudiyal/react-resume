@@ -17,7 +17,7 @@ function Navbar() {
       width: 70,
       x: mousePosition.x - 35,
       y: mousePosition.y - 35,
-      background: "white",
+      background: "cadetblue",
       mixBlendMode: "difference",
       // transition: { type: "spring", stiffness: 1000, damping: 100 },
     },

@@ -56,8 +56,7 @@ nav {
       li {
         a {
           // font-family: "Caveat-bold";
-          color: rgb(236, 235, 234);
-
+          color: rgb(201, 242, 224);
           position: relative;
 
           &::after {
@@ -83,6 +82,9 @@ nav {
       }
     }
     .toggle-btn {
+      display: none;
+    }
+    .toggle-container {
       display: none;
     }
   }
@@ -123,13 +125,13 @@ nav {
         display: block !important;
         color: bisque;
         font-size: 10px;
-        cursor: none;
 
         &:focus {
           outline: none;
         }
       }
       .toggle-container {
+        display: block;
         width: 100vw;
         position: absolute;
         top: 2.5rem !important;

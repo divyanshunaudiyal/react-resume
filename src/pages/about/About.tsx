@@ -10,17 +10,17 @@ function About() {
         .getBoundingClientRect();
 
       if (boundingBox.top < window.innerHeight && boundingBox.bottom >= 0) {
-        const extra = document.querySelector(".extra");
-        if (extra) {
-          extra.classList.add("fadeIn");
-        }
+        // const extra = document.querySelector(".extra");
+        // if (extra) {
+        //   extra.classList.add("slideToTop");
+        // }
 
         setIsScrolled(true);
       } else {
-        const extra = document.querySelector(".extra");
-        if (extra) {
-          extra.classList.remove("fadeIn");
-        }
+        // const extra = document.querySelector(".extra");
+        // if (extra) {
+        //   extra.classList.remove("slideToTop");
+        // }
 
         setIsScrolled(false);
       }
@@ -40,7 +40,7 @@ function About() {
       <h1>Who's this?</h1>
       <div className="about_technical">
         <div className="image">
-          <img src="public/1.jpeg" alt="" />
+          <img src="../../public/1.jpeg" alt="" />
         </div>
         <div className="details">
           <h2>Namaste 🙏🏻</h2>

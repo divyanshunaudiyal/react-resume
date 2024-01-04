@@ -10,7 +10,8 @@
   .project-container {
     .project-heading {
       @include page-heading;
-      text-align: center;
+      // text-align: center;
+      margin-left: 25%;
     }
     & .project-img {
       //contains image and text
@@ -27,7 +28,7 @@
       .project-text {
         width: 50%;
 
-        text-align: center;
+        // text-align: center;
         color: white;
         background: transparent;
         font-family: "Caveat-bold";
@@ -41,6 +42,7 @@
           align-items: center;
 
           & > div {
+            text-align: center;
             background: rgb(90, 90, 90);
             border-radius: 10px;
           }
@@ -49,6 +51,7 @@
     }
 
     &__project1 {
+      animation: slideToTop 1s;
       .project-img {
         border-radius: 1rem;
         box-shadow: $text-shadow;
@@ -92,8 +95,13 @@
   .project {
     width: 100vw;
     font-size: 40%;
-    margin: 3rem auto;
+    margin: 4rem auto;
     .project-container {
+      .project-heading {
+        // margin-left: 5%;
+        margin-left: 0;
+        text-align: center;
+      }
       &__project1 {
         margin: 0;
         padding: 0;

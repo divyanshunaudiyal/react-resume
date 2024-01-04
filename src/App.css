@@ -9,7 +9,7 @@
   cursor: none;
 }
 .cursor {
-  background-color: indianred;
+  background-color: rgb(31, 200, 200);
   height: 15px;
   width: 15px;
   border-radius: 50%;

@@ -63,8 +63,9 @@ $text-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 $bg-blue: #f6ffff;
 $bg-black: #042a2a;
 $bg-white: #ffffff;
-$highlight: rgb(19, 141, 141);
-$text-blue: #73dbffbd;
+$highlight: rgb(29, 149, 149);
+$text-blue: rgb(39, 172, 108);
+$text-floralwhite: floralwhite;
 $text-grey: rgb(233 233 233);
 @mixin about {
   margin: 4rem 0 0 0;
@@ -101,6 +102,7 @@ body {
 }
 
 .fadeIn {
+  opacity: 1;
   animation: fadeIn 1s ease-in;
 }
 
@@ -109,5 +111,5 @@ body {
 }
 .slideToTop {
   opacity: 1;
-  animation: slideToTop 2s;
+  animation: slideToTop 1s;
 }
