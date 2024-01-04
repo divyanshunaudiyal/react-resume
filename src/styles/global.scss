@@ -64,7 +64,7 @@ $bg-blue: #f6ffff;
 $bg-black: #042a2a;
 $bg-white: #ffffff;
 $highlight: rgb(19, 141, 141);
-$text-blue: #1e9999;
+$text-blue: #73dbffbd;
 $text-grey: rgb(233 233 233);
 @mixin about {
   margin: 4rem 0 0 0;
@@ -77,11 +77,15 @@ $text-grey: rgb(233 233 233);
   font-size: 40px;
   font-family: "Sigmar";
   animation: adjustSpacing 1.25s, slideToRight 1.5s;
-  color: #252c2c;
+  color: #ffffff;
   margin: 1rem auto;
+
+  @media screen and (max-width: 768px) {
+    animation: slideToRight 1.5s;
+  }
 }
 body {
-  font-family: "Helvetica";
+  line-height: 1.6;
 }
 
 // animation classes

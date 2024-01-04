@@ -9,15 +9,17 @@ function Navbar() {
   const variants = {
     default: {
       x: mousePosition.x - 7.5,
-      y: mousePosition.y - 7.5, //size of cursor is 32px so to center it do -16
+      y: mousePosition.y - 7.5,
+      // transition: { delay: -0.5 },
     },
     text: {
-      height: 50,
-      width: 50,
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25, // size 50 , so -25
-      background: "cadetblue",
+      height: 70,
+      width: 70,
+      x: mousePosition.x - 35,
+      y: mousePosition.y - 35,
+      background: "white",
       mixBlendMode: "difference",
+      // transition: { type: "spring", stiffness: 1000, damping: 100 },
     },
   };
 

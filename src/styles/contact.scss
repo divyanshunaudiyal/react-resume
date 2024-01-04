@@ -33,13 +33,40 @@
     }
     /* for contact form */
     .contact-form form {
-      max-width: 700px;
+      width: 61rem;
       margin: 0 auto;
       animation: slideToTop 1.5s;
+
+      .form-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.5rem;
+        grid-template-areas:
+          "fullname email"
+          "number ."
+          "message message"
+          "whatsapp .";
+
+        .fullname {
+          grid-area: fullname;
+        }
+        .email-id {
+          grid-area: email;
+        }
+        .phone-number {
+          grid-area: number;
+        }
+        .msg {
+          grid-area: message;
+        }
+        .whatsapp {
+          grid-area: whatsapp;
+        }
+      }
     }
     .contact-form form label {
       display: block;
-      width: 100%;
+      // width: 100%;
       /* padding: 0 0 0 3%; */
       margin-bottom: 3%;
     }
@@ -47,13 +74,13 @@
       text-transform: uppercase;
       letter-spacing: 5px;
       line-height: 1.8em;
-      width: 100%;
-      /*  */
+      width: 70%;
+
       background: transparent;
       color: #999;
       font-size: 12px;
       padding: 1rem 2.5rem;
-      // border: none;
+
       border: 0.5px solid rgb(58, 57, 57);
       // border-bottom-color: rgba(12, 12, 12, 0.3);
       border-radius: 1rem;
@@ -65,8 +92,22 @@
       transition: 2s;
       // background: rgb(80, 80, 80);
     }
-    //adding animation toeach input separately
-
+    label textarea {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      line-height: 1.8em;
+      width: 100%;
+      box-sizing: border-box;
+      background: transparent;
+      color: #999;
+      font-size: 12px;
+      padding: 1rem 2.5rem;
+      // border: none;
+      border: 0.5px solid rgb(58, 57, 57);
+      // border-bottom-color: rgba(12, 12, 12, 0.3);
+      border-radius: 1rem;
+      resize: none;
+    }
     #whatsapp-btn {
       box-sizing: border-box;
       border-radius: 15px;
@@ -93,7 +134,27 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem 0;
+    .contact-form form {
+      width: 100% !important;
 
+      label {
+        input {
+          // width: 50%;
+          padding: 1rem;
+          letter-spacing: 1px;
+          font-size: 10px !important;
+
+          &:focus {
+            letter-spacing: 0;
+          }
+        }
+        textarea {
+          font-size: 10px;
+          padding: 1rem;
+        }
+      }
+    }
     input {
       width: 80% !important;
       padding: 0rem;

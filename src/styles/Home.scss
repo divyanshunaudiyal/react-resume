@@ -45,7 +45,7 @@
       // //   margin-left: 25%;
       // }
 
-      .name {
+      span {
         color: $text-blue;
         font-family: "Poppins";
         letter-spacing: -1.5px;
@@ -105,8 +105,9 @@
       h1 {
         font-size: 20px;
 
-        .name {
-          font-size: 35px;
+        span {
+          letter-spacing: 2px;
+          font-size: 30px;
         }
       }
       p {

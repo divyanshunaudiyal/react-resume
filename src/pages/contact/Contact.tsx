@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="contact">
+    <section className="contact">
       <div className="contact-container">
         <h1 className="contact-heading">Get in touch.</h1>
         <h3 className="mail">
@@ -9,25 +9,31 @@ function Contact() {
         </h3>
         <div className="contact-msg contact-form" id="contact-form">
           <form action="">
-            <label className="label">
-              <input type="text" placeholder="name" id="name" />
-            </label>
-            <label className="label">
-              <input type="email" placeholder="email" id="email" />
-            </label>
-            <label className="label">
-              <input type="number" placeholder="phone number" id="phone-num" />
-            </label>
-            <label className="label">
-              <input type="text" placeholder="message" id="message" />
-            </label>
-            <button type="submit" id="whatsapp-btn">
-              Text on Whatsapp
-            </button>
+            <div className="form-container">
+              <label className="label fullname">
+                <input type="text" placeholder="name" id="name" />
+              </label>
+              <label className="label email-id">
+                <input type="email" placeholder="email" id="email" />
+              </label>
+              <label className="label phone-number">
+                <input
+                  type="number"
+                  placeholder="phone number"
+                  id="phone-num"
+                />
+              </label>
+              <label className="label msg">
+                <textarea placeholder="message" id="message" />
+              </label>
+              <button type="submit" id="whatsapp-btn" className="whatsapp">
+                Text on Whatsapp
+              </button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

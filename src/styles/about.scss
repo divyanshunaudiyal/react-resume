@@ -39,8 +39,6 @@
       padding-bottom: 2rem;
       position: relative; //for ::after
 
-      // font-size: 15px;
-
       h2 {
         margin: 0;
         font-size: 30px;
@@ -51,7 +49,6 @@
         font-size: 16px;
         animation: slideToLeft 1s;
       }
-      // gap: 2rem;
     }
   }
 
@@ -90,9 +87,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 15rem;
+        height: 20rem;
+        overflow: hidden;
         img {
           margin: 0 auto;
-          width: 80%;
+          width: 100%;
         }
       }
 
@@ -102,7 +102,7 @@
 
         h2 {
           font-size: 30px;
-          text-align: center;
+          // text-align: center;
         }
         p {
           font-size: 14px;

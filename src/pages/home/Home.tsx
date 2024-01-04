@@ -31,7 +31,7 @@ function Home() {
       <div className="home__pic"></div>
       <div className="home__text">
         <h1>
-          <span className="name">Divyanshu Naudiyal</span>
+          <span className="name">Frontend Developer</span>
         </h1>
 
         <p>
