@@ -4,12 +4,11 @@
 @import "./styles/about.scss";
 @import "./styles/project.scss";
 @import "./styles/contact.scss";
+@import "./styles/keyframes.scss";
+@import "./styles/animation-classes.scss";
 
-* {
-  cursor: none;
-}
 .cursor {
-  background-color: rgb(31, 200, 200);
+  background-color: cadetblue;
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -22,7 +21,7 @@
 
 @media screen and (max-width: 768px) {
   * {
-    cursor: pointer;
+    cursor: initial;
   }
   .cursor {
     display: none;

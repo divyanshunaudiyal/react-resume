@@ -1,24 +1,23 @@
 @use "./global.scss" as *;
 footer {
-  // display: none;
   padding: 1rem;
   font-weight: bold;
-  background: black;
+  background-color: rgba(9, 9, 9, 0.7); /* Red with 70% transparency */
   font-family: "Poppins-light";
-  box-shadow: $text-shadow;
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   .footer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: $text-wood;
 
     .copyright {
       p {
         letter-spacing: 1px;
-        color: seashell;
-        font-size: 10px;
+
+        font-size: 14px;
       }
     }
   }
@@ -30,8 +29,7 @@ footer {
     transition: transform ease;
 
     a {
-      color: wheat;
-
+      color: $text-wood;
       &:hover {
         transform: scale(1.5);
       }
@@ -42,6 +40,6 @@ footer {
 
 @media screen and (max-width: 768px) {
   footer {
-    padding: 1.6rem;
+    padding: 1.6rem 0;
   }
 }

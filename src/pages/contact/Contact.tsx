@@ -2,7 +2,9 @@ function Contact() {
   return (
     <section className="contact">
       <div className="contact-container">
-        <h1 className="contact-heading">Get in touch.</h1>
+        <h1 className="contact-heading">
+          <h2>Get in touch.</h2>
+        </h1>
         <h3 className="mail">
           Shoot an email{" "}
           <a href="mailto:div.naudiyal@gmail.com">Div.naudiyal@gmail.com</a> or

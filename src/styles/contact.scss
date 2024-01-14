@@ -6,10 +6,10 @@
 
   overflow: hidden;
   // background: cadetblue;
-  padding: 4rem 0 4rem 0;
+  margin: $section-margin;
   border-radius: 2rem;
   .contact-container {
-    margin: 0 auto;
+    // margin: 0 auto;
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -17,24 +17,40 @@
     animation: fadeIn 2s;
 
     .contact-heading {
-      // margin-left: 2rem;
-      @include page-heading;
-      margin: 1rem 0;
+      h2 {
+        @include page-heading;
+        margin: 1rem 0;
+      }
     }
     .mail {
-      // padding: 2rem 0;
       animation: slideToRight 2.25s;
-      color: rgb(212, 212, 212);
-      font-family: "Poppins-light";
+      color: rgb(248, 248, 248);
+      font-family: "Poppins";
       a {
         margin: 0 2px;
-        font-family: "Source-italic";
         color: rgb(247, 176, 35);
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          background: wheat;
+          height: 1px;
+          width: 100%; /* Start with full width */
+          transform: scaleX(0); /* Initial state: scale to 0 horizontally */
+          transform-origin: bottom left; /* Transform from the bottom right corner */
+          transition: transform 2s;
+        }
+
+        &:hover::before {
+          transform: scaleX(1); /* Hovered state: scale to full width */
+        }
       }
     }
     /* for contact form */
     .contact-form form {
-      width: 61rem;
+      width: 55rem;
       margin: 0 auto;
       animation: slideToTop 1.5s;
 
@@ -67,31 +83,28 @@
     }
     .contact-form form label {
       display: block;
-      // width: 100%;
-      /* padding: 0 0 0 3%; */
-      margin-bottom: 3%;
+
+      margin-bottom: 1rem;
     }
     label input {
+      border: unset;
       text-transform: uppercase;
       letter-spacing: 5px;
       line-height: 1.8em;
       width: 70%;
 
       background: transparent;
-      color: #999;
-      font-size: 12px;
+      color: #ececec;
+      font-size: 14px;
       padding: 1rem 2.5rem;
+      border: 0.5px solid rgb(255, 255, 255);
 
-      border: 0.5px solid rgb(58, 57, 57);
-      // border-bottom-color: rgba(12, 12, 12, 0.3);
       border-radius: 1rem;
     }
     label input:focus {
       outline: none;
-      color: rgb(203, 203, 203);
-      // border-bottom: 1px solid goldenrod;
-      transition: 2s;
-      // background: rgb(80, 80, 80);
+      color: rgb(231, 231, 231);
+      // transition: 2s;
     }
     label textarea {
       text-transform: uppercase;
@@ -100,11 +113,11 @@
       width: 100%;
       box-sizing: border-box;
       background: transparent;
-      color: #999;
+      color: #efefef;
       font-size: 12px;
       padding: 1rem 2.5rem;
       // border: none;
-      border: 0.5px solid rgb(58, 57, 57);
+      border: 0.5px solid rgb(238, 238, 238);
       // border-bottom-color: rgba(12, 12, 12, 0.3);
       border-radius: 1rem;
       resize: none;
@@ -115,7 +128,7 @@
       padding: 1rem 1.5rem;
       border: 1px solid rgb(15, 255, 107);
       background: transparent;
-      color: rgb(17, 111, 54);
+      color: rgb(35, 203, 102);
       font-family: monospace;
       font-weight: 300;
     }

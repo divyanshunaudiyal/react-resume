@@ -37,7 +37,7 @@ function About() {
 
   return (
     <section className="about">
-      <h1>Who's this?</h1>
+      <h1>Who's Divyanshu?</h1>
       <div className="about_technical">
         <div className="image">
           <img src="../../public/1.jpeg" alt="" />
@@ -47,15 +47,11 @@ function About() {
           <p>
             I'm Divyanshu Naudiyal, a passionate React developer with a solid
             foundation in HTML, CSS, JavaScript, Sass, Bootstrap, and React.
-            Holding a degree in Computer Science from Graphic Era University,
-            I've embarked on a journey to craft engaging and immersive web
-            experiences.
           </p>
           <p>
             {" "}
-            I strive to create visually compelling digital experiences. Each
-            line of code is an opportunity to bring a unique vision to life,
-            weaving together aesthetics and functionality seamlessly.{" "}
+            I love how the web can connect with people, this inspires me to
+            become better and continue learning so that I can make an impact.
           </p>
         </div>
       </div>
@@ -64,9 +60,9 @@ function About() {
       >
         <p>
           Apart from crafting code, I'm deeply passionate about Mixed Martial
-          Arts. As a coach in a local gym, I guide aspiring fighters. Beyond the
-          digital realm, I thrive on high-altitude hikes, coffee, and
-          exploration—an adventurous balance to my tech-centric world.
+          Arts. As a coach in a local gym, I guide aspiring fighters. And I love
+          high-altitude hikes, coffee, and exploration—an adventurous balance to
+          my tech-centric world.
         </p>
       </div>
     </section>

@@ -1,53 +1,4 @@
 @font-face {
-  font-family: "Helvetica";
-  src: url("../../public/Free-Sans/FreeSans.ttf");
-}
-@font-face {
-  font-family: "Helvetica-bold";
-  src: url("../../public/Free-Sans/FreeSansBold.ttf");
-}
-@font-face {
-  font-family: "Caveat";
-  src: url("../../public/Caveat/static/Caveat-Regular.ttf");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Caveat";
-  src: url("../../public/Caveat/static/Caveat-Bold.ttf");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Caveat-bold";
-  src: url("../../public/Caveat/static/Caveat-SemiBold.ttf");
-  // font-weight: 800;
-}
-@font-face {
-  font-family: "Archivo";
-  src: url("../../public/Archivo_Narrow/static/ArchivoNarrow-Regular.ttf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Sigmar";
-  src: url("../../public/Sigmar/Sigmar-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Scribble";
-  src: url("../../public/Rubik_Scribble/RubikScribble-Regular.ttf");
-}
-@font-face {
-  font-family: "Source";
-  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Regular.ttf");
-}
-@font-face {
-  font-family: "Source-bold";
-  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Bold.ttf");
-}
-@font-face {
-  font-family: "Source-italic";
-  src: url("../../public/Source_Code_Pro/static/SourceCodePro-Italic.ttf");
-}
-@font-face {
   font-family: "Poppins-light";
   src: url("../../public/Poppins/Poppins-ExtraLight.ttf");
 }
@@ -67,16 +18,20 @@ $highlight: rgb(29, 149, 149);
 $text-blue: rgb(39, 172, 108);
 $text-floralwhite: floralwhite;
 $text-grey: rgb(233 233 233);
+$text-wood: rgb(253, 219, 154);
+
+$section-margin: 6rem 0;
+
 @mixin about {
-  margin: 4rem 0 0 0;
+  margin: 3rem 0;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 }
 @mixin page-heading {
   letter-spacing: 5px;
 
-  font-size: 40px;
-  font-family: "Sigmar";
+  font-size: 50px;
+  font-family: "Poppins-bold";
   animation: adjustSpacing 1.25s, slideToRight 1.5s;
   color: #ffffff;
   margin: 1rem auto;
@@ -87,29 +42,18 @@ $text-grey: rgb(233 233 233);
 }
 body {
   line-height: 1.6;
+  font-family: "Poppins";
+  background: black;
+}
+a {
+  text-decoration: none;
 }
 
-// animation classes
-
-.slideToRight {
-  opacity: 1;
-  animation: slideToRight 1.5s forwards;
+:root {
+  width: max-content;
+  height: max-content;
 }
 
-.slideToLeft {
-  opacity: 1;
-  animation: slideToLeft 1s forwards;
-}
-
-.fadeIn {
-  opacity: 1;
-  animation: fadeIn 1s ease-in;
-}
-
-.visible {
-  animation: fadeIn 3s forwards;
-}
-.slideToTop {
-  opacity: 1;
-  animation: slideToTop 1s;
+h2 {
+  font-size: 30px;
 }

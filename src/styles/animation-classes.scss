@@ -1,0 +1,36 @@
+// animation classes
+
+.slideToRight {
+  opacity: 1;
+  animation: slideToRight 1.5s forwards;
+}
+
+.slideToLeft {
+  opacity: 1;
+  animation: slideToLeft 1s forwards;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation: fadeIn 1s ease-in;
+}
+
+.visible {
+  animation: fadeIn 3s forwards;
+}
+.slideToTop {
+  opacity: 1;
+  animation: slideToTop 1s;
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+.show {
+  animation: slideToLeft 1s;
+  display: block !important;
+  overflow: hidden;
+}
+body.show-toggle {
+  overflow-y: hidden;
+}

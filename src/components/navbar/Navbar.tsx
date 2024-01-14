@@ -17,7 +17,7 @@ function Navbar() {
       width: 70,
       x: mousePosition.x - 35,
       y: mousePosition.y - 35,
-      background: "cadetblue",
+      background: "white",
       mixBlendMode: "difference",
       // transition: { type: "spring", stiffness: 1000, damping: 100 },
     },
@@ -34,7 +34,7 @@ function Navbar() {
         <div className="logo">
           <Link to="/">
             <h2 onMouseEnter={textEnter} onMouseLeave={textLeave}>
-              Divyanshu Naudiyal
+              DN.
             </h2>
           </Link>
         </div>
